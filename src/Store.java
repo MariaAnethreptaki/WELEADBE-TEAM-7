@@ -1,105 +1,106 @@
 package src;
 
-import java.util.List
+import java.util.List;
 
         // this class contains the information about the stores//
 public class Store {
-    private long storeId;
-    private String storeName;
-    private String storeLocation;
-    private double rate;
-    private List<String> menu;
-    private boolean status;
-    private String storeCategory;
-    private List<String> famousStores;
-}
+            private long storeId;
+            private String storeName;
+            private String storeLocation;
+            private double rate;
+            private List<String> menu;
+            private boolean status;
+            private String storeCategory;
+            private List<String> famousStores;
 
-public Store(long storeId, String storeName,String storeLocation, Double rate, List<String>menu, boolean status, String storeCategory, List StringfamousStores) {
-    this.storeId = storeId;
-    this.storeName = storeName;
-    this.storeLocation = storeLocation;
-    this.rate = rate;
-    this.menu = menu;
-    this.status = status;
-    this.storeCategory = storeCategory;
-    this.famousStores = famousStores;
-}
 
-public long getStoreId(){
-    return storeId;
-}
-public void setstoreId(long storeId) {
+            public Store(long storeId, String storeName, String storeLocation, Double rate, List<String> menu, boolean status, String storeCategory, List StringfamousStores) {
+                this.storeId = storeId;
+                this.storeName = storeName;
+                this.storeLocation = storeLocation;
+                this.rate = rate;
+                this.menu = menu;
+                this.status = status;
+                this.storeCategory = storeCategory;
+            }
 
-    this.storeId = storeId;
-}
+            public long getStoreId() {
+                return storeId;
+            }
 
-public String getStoreName(){
+            public void setStoreId(long storeId) {
 
-    return storeName;
-}
+                this.storeId = storeId;
+            }
 
-public void setStoreName(String storeName){
+            public String getStoreName() {
 
-    this.storeName = storeName;
-}
+                return storeName;
+            }
 
-public String getStoreLocation(){
+            public void setStoreName(String storeName) {
 
-    return storeLocation;
-}
+                this.storeName = storeName;
+            }
 
-public void setStoreLocation(String storeLocation){
+            public String getStoreLocation() {
 
-    this.storeLocation = storeLocation;
-}
+                return storeLocation;
+            }
 
-public double getRate(){
+            public void setStoreLocation(String storeLocation) {
 
-    return rate;
-}
+                this.storeLocation = storeLocation;
+            }
 
-public void setRate(double rate) {
+            public double getRate() {
 
-    this.rate = rate;
-}
+                return rate;
+            }
 
-public List<String> getMenu(){
+            public void setRate(double rate) {
 
-    return menu;
-}
+                this.rate = rate;
+            }
 
-public void setMenu(List<String> menu) {
+            public List<String> getMenu() {
 
-    this.menu = menu;
-}
+                return menu;
+            }
 
-public boolean isStatus() {
+            public void setMenu(List<String> menu) {
 
-    return status;
-}
+                this.menu = menu;
+            }
 
-public void setStatus(boolean status) {
+            public boolean isStatus() {
 
-    this.status = status;
-}
+                return status;
+            }
 
-public String getStoreCategory() {
+            public void setStatus(boolean status) {
 
-    return storeCategory;
-}
+                this.status = status;
+            }
 
-public void setStoreCategory(String storeCategory) {
+            public String getStoreCategory() {
 
-    this.storeCategory = storeCategory;
-}
+                return storeCategory;
+            }
 
-public List<String> getFamousStores() {
+            public void setStoreCategory(String storeCategory) {
 
-    return famousStores;
-}
+                this.storeCategory = storeCategory;
+            }
 
-public void setFamousStores(List<String> famousStores) {
+            public List<String> getFamousStores() {
 
-    this.famousStores = famousStores;
-}
+                return famousStores;
+            }
+
+            public void setFamousStores(List<String> famousStores) {
+
+                this.famousStores = famousStores;
+            }
+        }
 
