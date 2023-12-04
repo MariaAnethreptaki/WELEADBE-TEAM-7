@@ -4,11 +4,8 @@ import java.util.List;
 
 /**
  * This class handles the private information of every user.
- * Potentially we need to :
- * 1)create AccountItem class in order to generate the AccountId
- * 2)create ShippingAddress class to handle the details of shippingAddress
- * (Street name, street number, country, postcode etc.)
  */
+
 public class Account{
     /*attributes*/
     public String accountId;
@@ -20,7 +17,7 @@ public class Account{
     private List<Orders> allPlacedOrders;
 
     public String getAccountId() {
-        return accountId;
+        return accountId;///need to see this
     }
 
     public void setAccountId(String accountId) {
