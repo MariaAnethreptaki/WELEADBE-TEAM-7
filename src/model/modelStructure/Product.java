@@ -1,8 +1,8 @@
-package src.model.model;
+package src.model.modelStructure;
 
 import java.util.ArrayList;
 
-public class Product {
+public class Product extends BaseModel {
     public long serialNumber;
     private String ProductName;
     private String description;

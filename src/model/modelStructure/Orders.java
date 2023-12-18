@@ -1,4 +1,4 @@
-package src.model.model;
+package src.model.modelStructure;
 
 import src.model.enumPackage.paymentInfo;
 import src.model.enumPackage.statusOfOrder;
