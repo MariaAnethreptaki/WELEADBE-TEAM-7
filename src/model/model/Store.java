@@ -1,10 +1,10 @@
-package src;
+package src.model.model;
 
 import java.util.List;
 
         // this class contains the information about the stores//
 public class Store {
-            private long storeId;
+            public long storeId;
             private String storeName;
             private String storeLocation;
             private double rate;

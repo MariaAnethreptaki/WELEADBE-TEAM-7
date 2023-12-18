@@ -1,4 +1,4 @@
-package src;
+package src.model.enumPackage;
 
 public enum TypeAddress {
     HOME,

@@ -1,4 +1,4 @@
-package src;
+package src.model.model;
 
 import java.util.List;
 
@@ -8,29 +8,53 @@ import java.util.List;
 
 public class Account{
     /*attributes*/
-    public String accountId;
-    private String username;
+    public long accountId;
+    private String surname;
+    private String name;
     private String email;
     private String password;
     private String phoneNumber;
     private List<ShippingAddress> shippingAddresses;
     private List<Orders> allPlacedOrders;
 
-    public String getAccountId() {
-        return accountId;///need to see this
+
+    public Account(String surname, String name, String email, String password, String phoneNumber) {
+        this.surname = surname;
+        this.name=name;
+        this.email = email;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
     }
 
-    public void setAccountId(String accountId) {
+    public Account(String password, String phoneNumber) {
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public long getAccountId() {
+        return accountId;///todo
+    }
+
+    public void setAccountId(long accountId) {
         this.accountId = accountId;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
 
     public String getEmail() {
         return email;
@@ -72,15 +96,4 @@ public class Account{
         this.allPlacedOrders = allPlacedOrders;
     }
 
-    public Account(String username, String email, String password, String phoneNumber) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.phoneNumber = phoneNumber;
-    }
-
-    public Account(String password, String phoneNumber) {
-        this.password = password;
-        this.phoneNumber = phoneNumber;
-    }
 }

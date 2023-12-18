@@ -1,4 +1,7 @@
-package src;
+package src.model.model;
+
+import src.model.enumPackage.paymentInfo;
+import src.model.enumPackage.statusOfOrder;
 
 import java.util.Date;
 import java.util.List;
@@ -8,15 +11,23 @@ import java.util.List;
 */
 public class Orders {
     /*attributes*/
-    private String OrderId;
+    public long OrderId;
     public Account customerId;
-    public String shippingAddress;
     public List<Product> products;
     public Date orderDate;
-    public String status;//TODO ENUM
-    public String paymentInfo;//TODO ENUM
+    public statusOfOrder status;
+    public src.model.enumPackage.paymentInfo paymentInfo;//TODO ENUM
 
-    public String getOrderId() {
+
+    public Orders(Account customerId, String shippingAddress, List<Product> products, Date orderDate, statusOfOrder status, paymentInfo paymentInfo) {
+        this.customerId = customerId;
+        this.products = products;
+        this.orderDate = orderDate;
+        this.status = status;
+        this.paymentInfo = paymentInfo;
+    }
+
+    public long getOrderId() {
         return OrderId;
     }
 
@@ -24,9 +35,6 @@ public class Orders {
         return customerId;
     }
 
-    public String getShippingAddress() {
-        return shippingAddress;
-    }
 
     public List<Product> getProducts() {
         return products;
@@ -36,24 +44,20 @@ public class Orders {
         return orderDate;
     }
 
-    public String getStatus() {
+    public statusOfOrder getStatus() {
         return status;
     }
 
-    public String getPaymentInfo() {
+    public paymentInfo getPaymentInfo() {
         return paymentInfo;
     }
 
-    public void setOrderId(String orderId) {
+    public void setOrderId(long orderId) {
         OrderId = orderId;
     }
 
     public void setCustomerId(Account customerId) {
         this.customerId = customerId;
-    }
-
-    public void setShippingAddress(String shippingAddress) {
-        this.shippingAddress = shippingAddress;
     }
 
     public void setProducts(List<Product> products) {
@@ -64,20 +68,12 @@ public class Orders {
         this.orderDate = orderDate;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(statusOfOrder status) {
         this.status = status;
     }
 
-    public void setPaymentInfo(String paymentInfo) {
+    public void setPaymentInfo(paymentInfo paymentInfo) {
         this.paymentInfo = paymentInfo;
     }
 
-    public Orders(Account customerId, String shippingAddress, List<Product> products, Date orderDate, String status, String paymentInfo) {
-        this.customerId = customerId;
-        this.shippingAddress = shippingAddress;
-        this.products = products;
-        this.orderDate = orderDate;
-        this.status = status;
-        this.paymentInfo = paymentInfo;
-    }
 }

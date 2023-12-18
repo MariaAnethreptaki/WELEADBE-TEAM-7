@@ -1,4 +1,7 @@
-package src;
+package src.model.model;
+
+import src.model.enumPackage.TypeAddress;
+
 /**
  * this class includes attributes of a shipping address.
  */

@@ -1,9 +1,9 @@
-package src;
+package src.model.model;
 
 import java.util.ArrayList;
 
 public class Product {
-    private String productId;
+    public long serialNumber;
     private String ProductName;
     private String description;
     private ArrayList<String> ingredients; //todo decide the type of the ingredients, added String just to get rid of the error
@@ -19,12 +19,12 @@ public class Product {
         this.category = category;
     }
 
-    public String getProductId() {
-        return productId;
+    public long getSerialNumber() {
+        return serialNumber;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setSerialNumber(long serialNumber) {
+        this.serialNumber = serialNumber;
     }
 
     public String getProductName() {
@@ -78,7 +78,7 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "productId='" + productId + '\'' +
+                "productId='" + serialNumber + '\'' +
                 ", ProductName='" + ProductName + '\'' +
                 ", description='" + description + '\'' +
                 ", ingredients=" + ingredients +
