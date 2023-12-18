@@ -1,7 +1,7 @@
-package src.model.modelStructure;
+package core.src.domain;
 
-import src.model.enumPackage.paymentInfo;
-import src.model.enumPackage.statusOfOrder;
+import core.src.domain.enumPackage.paymentInfo;
+import core.src.domain.enumPackage.statusOfOrder;
 
 import java.util.Date;
 import java.util.List;
@@ -16,7 +16,7 @@ public class Orders {
     public List<Product> products;
     public Date orderDate;
     public statusOfOrder status;
-    public src.model.enumPackage.paymentInfo paymentInfo;//TODO ENUM
+    public core.src.domain.enumPackage.paymentInfo paymentInfo;//TODO ENUM
 
 
     public Orders(Account customerId, String shippingAddress, List<Product> products, Date orderDate, statusOfOrder status, paymentInfo paymentInfo) {
