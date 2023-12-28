@@ -1,6 +1,6 @@
-package core.src.domain;
+package main.domain;
 
-import core.src.domain.enumPackage.TypeAddress;
+import main.domain.enumPackage.TypeAddress;
 
 /**
  * this class includes attributes of a shipping address.

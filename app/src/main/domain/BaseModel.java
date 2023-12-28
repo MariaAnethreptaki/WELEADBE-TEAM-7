@@ -1,4 +1,4 @@
-package core.src.domain;
+package main.domain;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package core.src.domain.enumPackage;
+package main.domain.enumPackage;
 
 public enum paymentInfo {
     Paypal,

@@ -1,4 +1,4 @@
-package core.src.base;
+package main.base;
 /*import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.slf4j.Logger;

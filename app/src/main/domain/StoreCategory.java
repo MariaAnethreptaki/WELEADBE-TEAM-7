@@ -1,10 +1,9 @@
-package core.src.domain;
+package main.domain;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class StoreCategory {
-    private long categoryId;
+public class StoreCategory extends BaseModel{
     private String nameCategory;
     private List<Store> stores = new ArrayList<>();
     private List<Store> famousStoresCategory = new ArrayList<>();
@@ -12,19 +11,10 @@ public class StoreCategory {
     public StoreCategory() {
     }
 
-    public StoreCategory(Long categoryId, String nameCategory, List<Store> stores, List<Store> famousStoresCategory) {
-        this.categoryId = categoryId;
+    public StoreCategory( String nameCategory, List<Store> stores, List<Store> famousStoresCategory) {
         this.nameCategory = nameCategory;
         this.stores = stores;
         this.famousStoresCategory = famousStoresCategory;
-    }
-
-    public Long getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(Long categoryId) {
-        this.categoryId = categoryId;
     }
 
     public String getNameCategory() {

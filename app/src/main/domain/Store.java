@@ -1,10 +1,9 @@
-package core.src.domain;
+package main.domain;
 
 import java.util.List;
 
         // this class contains the information about the stores//
-public class Store {
-            public long storeId;
+public class Store extends BaseModel{
             private String storeName;
             private String storeLocation;
             private double rate;
@@ -14,8 +13,7 @@ public class Store {
             private List<String> famousStores;
 
 
-            public Store(long storeId, String storeName, String storeLocation, Double rate, List<String> menu, boolean status, String storeCategory, List StringfamousStores) {
-                this.storeId = storeId;
+            public Store(String storeName, String storeLocation, Double rate, List<String> menu, boolean status, String storeCategory, List StringfamousStores) {
                 this.storeName = storeName;
                 this.storeLocation = storeLocation;
                 this.rate = rate;
@@ -24,14 +22,6 @@ public class Store {
                 this.storeCategory = storeCategory;
             }
 
-            public long getStoreId() {
-                return storeId;
-            }
-
-            public void setStoreId(long storeId) {
-
-                this.storeId = storeId;
-            }
 
             public String getStoreName() {
 

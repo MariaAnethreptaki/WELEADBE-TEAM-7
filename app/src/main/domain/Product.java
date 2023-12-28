@@ -1,9 +1,9 @@
-package core.src.domain;
+package main.domain;
 
 import java.util.ArrayList;
 
 public class Product extends BaseModel {
-    public long serialNumber;
+    public String serialNumber;
     private String ProductName;
     private String description;
     private ArrayList<String> ingredients; //todo decide the type of the ingredients, added String just to get rid of the error
@@ -19,11 +19,11 @@ public class Product extends BaseModel {
         this.category = category;
     }
 
-    public long getSerialNumber() {
+    public String getSerialNumber() {
         return serialNumber;
     }
 
-    public void setSerialNumber(long serialNumber) {
+    public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
 

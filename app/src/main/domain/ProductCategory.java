@@ -1,23 +1,14 @@
-package core.src.domain;
+package main.domain;
 
 import java.util.ArrayList;
 
 public class ProductCategory {
    private String productCategoryName;
-   public long categoryId;
    private ArrayList<Product> products;
 
     public ProductCategory(String productCategoryName, ArrayList<Product> products) {
         this.productCategoryName = productCategoryName;
         this.products = products;
-    }
-
-    public long getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(long categoryId) {
-        this.categoryId = categoryId;
     }
 
     public String getProductCategoryName() {
