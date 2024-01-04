@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Product extends BaseModel {
     public String serialNumber;
-    private String ProductName;
+    private String productName;
     private String description;
     private ArrayList<String> ingredients; //todo decide the type of the ingredients, added String just to get rid of the error
     private double price;
@@ -12,7 +12,7 @@ public class Product extends BaseModel {
     private ProductCategory category;
 
     public Product(String productName, String description, double price, boolean available, ProductCategory category) {
-        ProductName = productName;
+        this.productName = productName;
         this.description = description;
         this.price = price;
         this.available = available;
@@ -28,11 +28,11 @@ public class Product extends BaseModel {
     }
 
     public String getProductName() {
-        return ProductName;
+        return productName;
     }
 
     public void setProductName(String productName) {
-        ProductName = productName;
+        this.productName = productName;
     }
 
     public String getDescription() {
@@ -79,7 +79,7 @@ public class Product extends BaseModel {
     public String toString() {
         return "Product{" +
                 "productId='" + serialNumber + '\'' +
-                ", ProductName='" + ProductName + '\'' +
+                ", ProductName='" + productName + '\'' +
                 ", description='" + description + '\'' +
                 ", ingredients=" + ingredients +
                 ", price=" + price +
