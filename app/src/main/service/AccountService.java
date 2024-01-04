@@ -1,6 +1,6 @@
-package main.service;
+package gr.codelearn.spring.showcase.app.service;
 
-import main.domain.Account; ...
+import gr.codelearn.spring.showcase.app.model.Account;
 
 public interface AccountService extends BaseService<Account,Long> {
     Account findByEmail(String email);
