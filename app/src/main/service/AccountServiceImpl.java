@@ -1,4 +1,4 @@
-package gr.codelearn.spring.showcase.app.service
+package gr.codelearn.spring.showcase.app.service;
 
 import lombok.RequiredArgsConstructor;
 import gr.codelearn.spring.showcase.app.model.Account;

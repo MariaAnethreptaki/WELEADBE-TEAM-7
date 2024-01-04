@@ -1,4 +1,4 @@
-package gr.codelearn.spring.showcase.app.repository
+package gr.codelearn.spring.showcase.app.repository;
 
 import gr.codelearn.spring.showcase.app.model.Category;
 import main.domain.Account;

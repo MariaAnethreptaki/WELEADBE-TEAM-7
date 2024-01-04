@@ -5,7 +5,7 @@ import main.domain.Product;
 import org.springframework.stereotype.Repository;
 
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicLong
+import java.util.concurrent.atomic.AtomicLong;
 
 public class AccountRepositoryImpl extends BaseRepositoryImplementation<Account> implements AccountRepository {
 	private final ConcurrentHashMap<Long, Account> storage = new ConcurrentHashMap<>();
