@@ -8,17 +8,19 @@ import main.domain.Account;
 public class AccountServiceImpl extends BaseServiceImplementation<Account> implements AccountService {
     private final AccountRepository accountRepository;
 
+    public AccountServiceImpl(AccountRepository accountRepository) {
+        this.accountRepository = accountRepository;
+    }
+
     @Override
-    protected AccountRepository<Account,Long> getRepository() {
+    protected AccountRepository getRepository() {
         return accountRepository;
     }
     @Override
     public Account findByEmail(final String email) {
         return null;
     }
-    @Override
-    public AccountServiceImpl(AccountRepository accountRepository) {
-        this.accountRepository = accountRepository;
-    }
+
+
 }
 
