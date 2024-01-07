@@ -7,7 +7,7 @@ import main.domain.StoreCategory;
 
 
 @Repository
-public abstract class StoreCategoryRepositoryImpl extends BaseRepositoryImplementation<StoreCategory> implements StoreCategoryRepository {
+public abstract class StoreCategoryRepositoryImplementation extends BaseRepositoryImplementation<StoreCategory> implements StoreCategoryRepository {
 	private final ConcurrentHashMap<Long, StoreCategory> storage = new ConcurrentHashMap<>();
 	private final AtomicLong sequence = new AtomicLong(0);
 
