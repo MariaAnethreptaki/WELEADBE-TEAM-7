@@ -3,8 +3,11 @@ package main.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class StoreCategory extends BaseModel{
     private String nameCategory;
+
+    private String description;
     private List<Store> stores = new ArrayList<>();
     private List<Store> famousStoresCategory = new ArrayList<>();
 
@@ -15,6 +18,14 @@ public class StoreCategory extends BaseModel{
         this.nameCategory = nameCategory;
         this.stores = stores;
         this.famousStoresCategory = famousStoresCategory;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getNameCategory() {

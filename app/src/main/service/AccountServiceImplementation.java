@@ -5,10 +5,10 @@ import org.springframework.stereotype.Service;
 import main.domain.Account;
 @Service
 @RequiredArgsConstructor
-public class AccountServiceImpl extends BaseServiceImplementation<Account> implements AccountService {
+public class AccountServiceImplementation extends BaseServiceImplementation<Account> implements AccountService {
     private final AccountRepository accountRepository;
 
-    public AccountServiceImpl(AccountRepository accountRepository) {
+    public AccountServiceImplementation(AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
     }
 

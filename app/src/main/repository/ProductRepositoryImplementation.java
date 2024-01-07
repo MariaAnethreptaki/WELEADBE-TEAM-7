@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Repository
-public class ProductRepositoryImpl extends BaseRepositoryImplementation<Product> implements ProductRepository {
+public class ProductRepositoryImplementation extends BaseRepositoryImplementation<Product> implements ProductRepository {
 	private final ConcurrentHashMap<Long, Product> storage = new ConcurrentHashMap<>();
 	private final AtomicLong sequence = new AtomicLong(0);
 
