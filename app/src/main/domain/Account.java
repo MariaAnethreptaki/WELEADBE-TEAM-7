@@ -13,7 +13,7 @@ public class Account extends BaseModel{
     private String password;
     private String phoneNumber;
     private List<ShippingAddress> shippingAddresses;
-    private List<Orders> allPlacedOrders;
+    private List<Order> allPlacedOrders;
 
     public String getSurname() {
         return surname;
@@ -39,7 +39,7 @@ public class Account extends BaseModel{
         return shippingAddresses;
     }
 
-    public List<Orders> getAllPlacedOrders() {
+    public List<Order> getAllPlacedOrders() {
         return allPlacedOrders;
     }
 
@@ -80,7 +80,7 @@ public class Account extends BaseModel{
         this.shippingAddresses = shippingAddresses;
     }
 
-    public void setAllPlacedOrders(List<Orders> allPlacedOrders) {
+    public void setAllPlacedOrders(List<Order> allPlacedOrders) {
         this.allPlacedOrders = allPlacedOrders;
     }
 }

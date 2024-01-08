@@ -1,6 +1,6 @@
 package main.domain.enumPackage;
 
-public enum statusOfOrder {
+public enum StatusOfOrder {
     PENDING,
     PROCESSING,
     SHIPPED,

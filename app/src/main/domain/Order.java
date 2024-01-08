@@ -1,7 +1,7 @@
 package main.domain;
 
-import main.domain.enumPackage.paymentInfo;
-import main.domain.enumPackage.statusOfOrder;
+import main.domain.enumPackage.PaymentInfo;
+import main.domain.enumPackage.StatusOfOrder;
 
 import java.util.Date;
 import java.util.List;
@@ -9,16 +9,16 @@ import java.util.List;
 /** This class handles the private information of every order.
 * create OrderItem to generate the OrderId
 */
-public class Orders extends BaseModel{
+public class Order extends BaseModel{
     /*attributes*/
     public Account customerId;
     public List<Product> products;
     public Date orderDate;
-    public statusOfOrder status;
-    public paymentInfo paymentInfo;//TODO ENUM
+    public StatusOfOrder status;
+    public PaymentInfo paymentInfo;//TODO ENUM
 
 
-    public Orders(Account customerId, String shippingAddress, List<Product> products, Date orderDate, statusOfOrder status, paymentInfo paymentInfo) {
+    public Order(Account customerId, String shippingAddress, List<Product> products, Date orderDate, StatusOfOrder status, PaymentInfo paymentInfo) {
         this.customerId = customerId;
         this.products = products;
         this.orderDate = orderDate;
@@ -40,11 +40,11 @@ public class Orders extends BaseModel{
         return orderDate;
     }
 
-    public statusOfOrder getStatus() {
+    public StatusOfOrder getStatus() {
         return status;
     }
 
-    public paymentInfo getPaymentInfo() {
+    public PaymentInfo getPaymentInfo() {
         return paymentInfo;
     }
 
@@ -60,11 +60,11 @@ public class Orders extends BaseModel{
         this.orderDate = orderDate;
     }
 
-    public void setStatus(statusOfOrder status) {
+    public void setStatus(StatusOfOrder status) {
         this.status = status;
     }
 
-    public void setPaymentInfo(paymentInfo paymentInfo) {
+    public void setPaymentInfo(PaymentInfo paymentInfo) {
         this.paymentInfo = paymentInfo;
     }
 

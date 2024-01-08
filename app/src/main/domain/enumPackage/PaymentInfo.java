@@ -1,6 +1,6 @@
 package main.domain.enumPackage;
 
-public enum paymentInfo {
+public enum PaymentInfo {
     Paypal,
     CREDIT_DEBIT_CARD,
     CASH
