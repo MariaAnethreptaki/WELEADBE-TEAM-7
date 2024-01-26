@@ -6,13 +6,16 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 @Getter
 @Setter
 @ToString(callSuper = true)
-public class StoreCategory extends BaseResource {
+public class StoreCategoryResource extends BaseResource {
     private String nameCategory;
     private String description;
-    private List<Store> stores = new ArrayList<>();
-    private List<Store> famousStoresCategory = new ArrayList<>();
+    private Set<Store> stores ;
+    private Set<Store> famousStoresCategory ;
 }

@@ -1,8 +1,8 @@
 package gr.athtech.service;
 
 import gr.athtech.domain.StoreCategory;
-import gr.athtech.repository.BaseRepository;
 import gr.athtech.repository.StoreCategoryRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -11,7 +11,7 @@ public class StoreCategoryServiceImplementation extends BaseServiceImplementatio
 	private StoreCategoryRepository categoryRepository;
 
 	@Override
-	protected BaseRepository<StoreCategory, Long> getRepository() {
+	protected JpaRepository<StoreCategory, Long> getRepository() {
 		return categoryRepository;
 	}
 

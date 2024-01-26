@@ -1,66 +1,59 @@
 package gr.athtech.domain;
 
-import lombok.Builder;
-import lombok.Getter;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-        // this class contains the information about the stores//
+// this class contains the information about the stores//
 @Getter
+@Setter
 @Builder
-public class Store extends BaseModel{
-            private String storeName;
-            private String storeLocation;
-            private double rate;
-            private List<String> menu;
-            private boolean status;
-            private String storeCategory;
-            private List<String> famousStores;
+@ToString(callSuper = true)
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "STORES")
+@SequenceGenerator(name = "idGenerator", sequenceName = "STORES_SEQ", initialValue = 1, allocationSize = 1)
 
+public class Store extends BaseModel {
+    @NotNull
+    @Column(length = 50, nullable = false)
+    private String storeName;
 
-            public Store(String storeName, String storeLocation, Double rate, List<String> menu, boolean status, String storeCategory, List StringfamousStores) {
-                this.storeName = storeName;
-                this.storeLocation = storeLocation;
-                this.rate = rate;
-                this.menu = menu;
-                this.status = status;
-                this.storeCategory = storeCategory;
-            }
+    @NotNull
+    @Column(length = 50, nullable = false)
+    private String storeLocation;
 
+    @NotNull
+    @Min(1)
+    @Max(5)
+    private double rate;
 
-            public void setStoreName(String storeName) {
+    @NotNull(message = "CLOSED")
+    @Column(length = 11, nullable = false)
+    private boolean status;
 
-                this.storeName = storeName;
-            }
+    @NotNull
+    @Column(length = 50, nullable = false)
+    private String storeCategory;
 
-            public void setStoreLocation(String storeLocation) {
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @OneToMany(mappedBy = "menu", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
+    private Set<Product> menu = new HashSet<>();
 
-                this.storeLocation = storeLocation;
-            }
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @OneToMany(mappedBy = "Store", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
+    private Set<Store> famousStores = new HashSet<>();
 
-            public void setRate(double rate) {
-
-                this.rate = rate;
-            }
-
-            public void setMenu(List<String> menu) {
-
-                this.menu = menu;
-            }
-
-            public void setStatus(boolean status) {
-
-                this.status = status;
-            }
-
-            public void setStoreCategory(String storeCategory) {
-
-                this.storeCategory = storeCategory;
-            }
-
-            public void setFamousStores(List<String> famousStores) {
-
-                this.famousStores = famousStores;
-            }
-        }
+}
 

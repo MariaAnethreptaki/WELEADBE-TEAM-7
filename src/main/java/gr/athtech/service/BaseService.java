@@ -4,6 +4,7 @@ package gr.athtech.service;
 
 import gr.athtech.domain.BaseModel;
 
+import java.util.HashSet;
 import java.util.List;
 
 public interface BaseService<T extends BaseModel, K> {

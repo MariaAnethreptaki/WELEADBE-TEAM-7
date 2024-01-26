@@ -1,66 +1,46 @@
 package gr.athtech.domain;
 
-import lombok.Builder;
-import lombok.Getter;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
 @Getter
+@Setter
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(callSuper = true)
+@Entity
+@Table(name = "PRODUCTS")
+@SequenceGenerator(name = "idGenerator", sequenceName = "PRODUCTS_SEQ", initialValue = 1, allocationSize = 1)
+
 public class Product extends BaseModel {
+    @NotNull
+    @Column(length = 30, nullable = false, unique = true)
     public String serialNumber;
+
+    @NotNull
+    @Column(length = 50, nullable = false)
     private String productName;
+
+    @NotNull
+    @Column(length = 50, nullable = false)
     private String description;
-    private ArrayList<String> ingredients; //todo decide the type of the ingredients, added String just to get rid of the error
+
+    @NotNull
+    @Column(precision = 10, scale = 2, nullable = false)
     private double price;
+
+    @NotNull(message = "Not available")
+    @Column(length = 11, nullable = false)
     private boolean available;
+
+    @NotNull
+    @ManyToOne(fetch = FetchType.EAGER)
     private ProductCategory category;
 
-    public Product(String productName, String description, double price, boolean available, ProductCategory category) {
-        this.productName = productName;
-        this.description = description;
-        this.price = price;
-        this.available = available;
-        this.category = category;
-    }
-
-    public void setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setIngredients(ArrayList<String> ingredients) {
-        this.ingredients = ingredients;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public void setAvailable(boolean available) {
-        this.available = available;
-    }
-
-    public void setCategory(ProductCategory category) {
-        this.category = category;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "productId='" + serialNumber + '\'' +
-                ", ProductName='" + productName + '\'' +
-                ", description='" + description + '\'' +
-                ", ingredients=" + ingredients +
-                ", price=" + price +
-                ", available=" + available +
-                ", category=" + category +
-                '}';
-    }
 }

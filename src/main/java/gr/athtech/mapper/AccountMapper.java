@@ -2,8 +2,9 @@ package gr.athtech.mapper;
 
 import gr.athtech.domain.Account;
 import gr.athtech.transfer.resource.AccountResource;
-import org.mapstruct.mapper;
+import org.mapstruct.Mapper;
 
-@Mapper(componentDomain= "spring", config = IgnoreUnmappedMapperConfig.class)
+
+@Mapper(componentModel= "spring", config = IgnoreUnmappedMapperConfig.class)
 public interface AccountMapper extends BaseMapper<Account, AccountResource> {
 }

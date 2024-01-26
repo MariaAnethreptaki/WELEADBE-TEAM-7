@@ -1,13 +1,12 @@
 package gr.athtech.service;
 
-import gr.athtech.domain.ProductCategory;
 import gr.athtech.domain.ShippingAddress;
-import gr.athtech.repository.BaseRepository;
-import gr.athtech.repository.ProductCategoryRepository;
 import gr.athtech.repository.ShippingAddressRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class ShippingAddressServiceImplementation extends BaseServiceImplementation<ShippingAddress> implements ShippingAddressService{
     private final ShippingAddressRepository shippingAddressRepo;
 
@@ -16,7 +15,7 @@ public class ShippingAddressServiceImplementation extends BaseServiceImplementat
     }
 
     @Override
-    protected BaseRepository<ShippingAddress, Long> getRepository() {
+    protected JpaRepository<ShippingAddress, Long> getRepository() {
         return shippingAddressRepo;
     }
 
@@ -27,6 +26,6 @@ public class ShippingAddressServiceImplementation extends BaseServiceImplementat
 
     @Override
     public ShippingAddress getShippingAddress(long id) {
-        return shippingAddressRepo.get(id);
+        return shippingAddressRepo.findById(id);
     }
 }

@@ -1,11 +1,12 @@
-package gr.codelearn.spring.showcase.app.controller;
+package gr.athtech.controller;
 
-import gr.codelearn.spring.showcase.app.mapper.BaseMapper;
-import gr.codelearn.spring.showcase.app.mapper.OrderMapper;
-import gr.codelearn.spring.showcase.app.model.Order;
-import gr.codelearn.spring.showcase.app.service.BaseService;
-import gr.codelearn.spring.showcase.app.service.OrderService;
-import gr.codelearn.spring.showcase.app.transfer.resource.OrderResource;
+import gr.athtech.mapper.BaseMapper;
+import gr.athtech.mapper.OrderMapper;
+import gr.athtech.domain.Order;
+import gr.athtech.service.BaseService;
+import gr.athtech.service.OrderService;
+import gr.athtech.transfer.resource.OrderResource;
+import lombok.RequiredArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

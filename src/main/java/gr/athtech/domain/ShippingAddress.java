@@ -1,93 +1,56 @@
 package gr.athtech.domain;
 
-import lombok.Builder;
-import lombok.Getter;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 import gr.athtech.domain.enumPackage.TypeAddress;
 
 /**
  * this class includes attributes of a shipping address.
  */
 @Getter
+@Setter
 @Builder
+@ToString(callSuper = true)
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "SHIPPING_ADDRESS")
+@SequenceGenerator(name = "idGenerator", sequenceName = "SHIPPING_ADDRESS_SEQ", initialValue = 1, allocationSize = 1)
 public class ShippingAddress extends BaseModel{
+    @NotNull
+    @Column(length = 50, nullable = false)
     private String street;
+
+    @NotNull
+    @Column(length = 50, nullable = false)
     private String streetNumber;
+
+    @NotNull
+    @Column(length = 50, nullable = false)
     private String floor;
+
+    @NotNull
+    @Column(length = 50, nullable = false)
     private String bell;
+
+    @NotNull
+    @Column(length = 50, nullable = false)
     private String city;
+
+    @NotNull
+    @Column(length = 50, nullable = false)
     private String zipCode;
+
+    @Column(length = 50, nullable = false)
     private String specificInstructions;
+
+    @Enumerated(EnumType.STRING)
+    @Column(length = 10, nullable = false)
     private TypeAddress typeAddress;
+
+    @NotNull
+    @Column(length = 50, nullable = false)
     private String communicationPhoneNumber;
 
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
-    public void setStreetNumber(String streetNumber) {
-        this.streetNumber = streetNumber;
-    }
-
-    public void setFloor(String floor) {
-        this.floor = floor;
-    }
-
-    public void setBell(String bell) {
-        this.bell = bell;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
-    }
-
-    public void setSpecificInstructions(String specificInstructions) {
-        this.specificInstructions = specificInstructions;
-    }
-
-    public void setTypeAddress(TypeAddress typeAddress) {
-        this.typeAddress = typeAddress;
-    }
-
-    public void setCommunicationPhoneNumber(String communicationPhoneNumber) {
-        this.communicationPhoneNumber = communicationPhoneNumber;
-    }
-
-    public ShippingAddress(String street, String streetNumber, String floor, String bell, String city, String zipCode, String specificInstructions, TypeAddress typeAddress, String communicationPhoneNumber) {
-        this.street = street;
-        this.streetNumber = streetNumber;
-        this.floor = floor;
-        this.bell = bell;
-        this.city = city;
-        this.zipCode = zipCode;
-        this.specificInstructions = specificInstructions;
-        this.typeAddress = typeAddress;
-        this.communicationPhoneNumber = communicationPhoneNumber;
-    }
-
-    public ShippingAddress(String street, String streetNumber, String city, String zipCode, String communicationPhoneNumber) {
-        this.street = street;
-        this.streetNumber = streetNumber;
-        this.city = city;
-        this.zipCode = zipCode;
-        this.communicationPhoneNumber = communicationPhoneNumber;
-    }
-
-    @Override
-    public String toString() {
-        return "ShippingAddress{" +
-                "street='" + street + '\'' +
-                ", streetNumber='" + streetNumber + '\'' +
-                ", floor='" + floor + '\'' +
-                ", bell='" + bell + '\'' +
-                ", city='" + city + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                ", specificInstructions='" + specificInstructions + '\'' +
-                ", typeAddress=" + typeAddress +
-                ", communicationPhoneNumber='" + communicationPhoneNumber + '\'' +
-                '}';
-    }
 }

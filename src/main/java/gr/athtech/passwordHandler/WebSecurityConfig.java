@@ -1,4 +1,4 @@
-package gr.athtech.domain.passwordHandler;
+package gr.athtech.passwordHandler;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

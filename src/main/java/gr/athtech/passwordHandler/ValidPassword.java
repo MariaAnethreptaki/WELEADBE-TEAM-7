@@ -1,4 +1,4 @@
-package gr.athtech.domain.passwordHandler;
+package gr.athtech.passwordHandler;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

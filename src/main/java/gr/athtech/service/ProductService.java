@@ -7,4 +7,7 @@ import java.util.List;
 public interface ProductService extends BaseService<Product,Long>{
     List<Product> getProducts();
     Product getProduct(String serialNumber);
+    Product findBySerial(String serial);
+
+    Product create(Product product, Long categoryId);
 }

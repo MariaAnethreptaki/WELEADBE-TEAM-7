@@ -1,5 +1,7 @@
-package gr.codelearn.spring.showcase.app.transfer.resource;
+package gr.athtech.transfer.resource;
 
+import gr.athtech.domain.Order;
+import gr.athtech.domain.Product;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -10,7 +12,8 @@ import java.math.BigDecimal;
 @Setter
 @ToString(callSuper = true)
 public class OrderItemResource extends BaseResource {
-	private ProductResource product;
+	private Product product;
+	private Order order;
 	private Integer quantity;
 	private BigDecimal price;
 }

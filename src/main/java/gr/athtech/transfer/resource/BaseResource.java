@@ -1,4 +1,4 @@
-package gr.codelearn.spring.showcase.app.transfer.resource;
+package gr.athtech.transfer.resource;
 
 import lombok.Getter;
 import lombok.Setter;

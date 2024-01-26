@@ -1,4 +1,4 @@
-package gr.codelearn.spring.showcase.app.transfer;
+package gr.athtech.transfer;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Builder;

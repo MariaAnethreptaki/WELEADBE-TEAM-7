@@ -2,9 +2,10 @@ package gr.athtech.service;
 
 import gr.athtech.domain.*;
 import gr.athtech.domain.enumPackage.PaymentInfo;
-import gr.athtech.repository.BaseRepository;
 import gr.athtech.repository.OrderRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -16,7 +17,7 @@ public class OrderServiceImplementation extends BaseServiceImplementation<Order>
 	}
 
 	@Override
-	protected BaseRepository<Order, Long> getRepository() {
+	protected JpaRepository<Order, Long> getRepository() {
 		return orderRepository;
 	}
 
@@ -44,4 +45,5 @@ public class OrderServiceImplementation extends BaseServiceImplementation<Order>
 	public void checkout(Order order, PaymentInfo paymentMethod) {//todo fix
 
 	}
+
 }

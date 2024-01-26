@@ -1,7 +1,7 @@
-package gr.codelearn.spring.showcase.app.mapper;
+package gr.athtech.mapper;
 
-import gr.codelearn.spring.showcase.app.model.OrderItem;
-import gr.codelearn.spring.showcase.app.transfer.resource.OrderItemResource;
+import gr.athtech.domain.OrderItem;
+import gr.athtech.transfer.resource.OrderItemResource;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring", config = IgnoreUnmappedMapperConfig.class)

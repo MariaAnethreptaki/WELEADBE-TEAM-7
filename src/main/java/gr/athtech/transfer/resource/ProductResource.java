@@ -1,17 +1,20 @@
-package gr.codelearn.spring.showcase.app.transfer.resource;
+package gr.athtech.transfer.resource;
 
+import gr.athtech.domain.ProductCategory;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.math.BigDecimal;
+import java.util.ArrayList;
 
 @Getter
 @Setter
 @ToString(callSuper = true)
 public class ProductResource extends BaseResource {
-	private String name;
-	private String serial;
-	private BigDecimal price;
-	private CategoryResource category;
+	public String serialNumber;
+	private String productName;
+	private String description;
+	private double price;
+	private boolean available;
+	private ProductCategory category;
 }
