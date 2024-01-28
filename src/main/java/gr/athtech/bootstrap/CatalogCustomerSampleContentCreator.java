@@ -31,25 +31,25 @@ public class CatalogCustomerSampleContentCreator extends BaseComponent implement
 
 		List<Product> products = List.of(
 				Product.builder().serialNumber("SN1000-0001").productName("GYROS KOTOPOULO")
-						.price(BigDecimal.valueOf(3.8).doubleValue()).category(newCategory).build(),
+						.price(BigDecimal.valueOf(3.8)).category(newCategory).build(),
 				Product.builder().serialNumber("SN1000-0002").productName("GYROS XOIRINO")
-						.price(BigDecimal.valueOf(3.5).doubleValue()).category(newCategory).build(),
+						.price(BigDecimal.valueOf(3.5) ).category(newCategory).build(),
 				Product.builder().serialNumber("SN1100-0001").productName("GYROS ANAMEIKTOS")
-						.price(BigDecimal.valueOf(3.6).doubleValue()).category(newCategory).build(),
+						.price(BigDecimal.valueOf(3.6) ).category(newCategory).build(),
 				Product.builder().serialNumber("SN1100-0002").productName("SOUBLAKI KOTOPOULO")
-						.price(BigDecimal.valueOf(4.5).doubleValue()).category(newCategory).build(),
+						.price(BigDecimal.valueOf(4.5) ).category(newCategory).build(),
 				Product.builder().serialNumber("SN1200-0001").productName("SOUBLAKI XOIRINO")
-						.price(BigDecimal.valueOf(4.3).doubleValue()).category(newCategory).build(),
+						.price(BigDecimal.valueOf(4.3) ).category(newCategory).build(),
 				Product.builder().serialNumber("SN1300-0001").productName("PANSETA")
-						.price(BigDecimal.valueOf(6.5).doubleValue()).category(newCategory).build(),
+						.price(BigDecimal.valueOf(6.5) ).category(newCategory).build(),
 				Product.builder().serialNumber("SN1400-0001").productName("VEGAN MPIFTEKI")
-						.price(BigDecimal.valueOf(4.5).doubleValue()).category(newCategory).build(),
+						.price(BigDecimal.valueOf(4.5) ).category(newCategory).build(),
 				Product.builder().serialNumber("SN1500-0001").productName("MPIFTEKI")
-						.price(BigDecimal.valueOf(5).doubleValue()).category(newCategory).build(),
+						.price(BigDecimal.valueOf(5) ).category(newCategory).build(),
 				Product.builder().serialNumber("SN1000-0003").productName("KALAMARAKI")
-						.price(BigDecimal.valueOf(4.5).doubleValue()).category(newCategory).build(),
+						.price(BigDecimal.valueOf(4.5) ).category(newCategory).build(),
 				Product.builder().serialNumber("SN1000-0004").productName("FILETO KOTOPOULO")
-						.price(BigDecimal.valueOf(8).doubleValue()).category(newCategory).build());
+						.price(BigDecimal.valueOf(8) ).category(newCategory).build());
 
 		var productsCreated = productService.createAll(products);
 		logger.info("Created {} products.", productsCreated.size());
