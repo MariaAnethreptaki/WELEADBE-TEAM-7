@@ -11,8 +11,9 @@ import gr.athtech.domain.Account;
 @Service
 @RequiredArgsConstructor
 public class AccountServiceImplementation extends BaseServiceImplementation<Account> implements AccountService {
-    private final AccountRepository accountRepository;
-    private final PasswordEncoder passwordEncoder;
+    private AccountRepository accountRepository;
+
+    private PasswordEncoder passwordEncoder;
 
 
     @Override
@@ -21,21 +22,16 @@ public class AccountServiceImplementation extends BaseServiceImplementation<Acco
     }
 
 
-    public Account findByPhone(String phone){return accountRepository.findByPhone(phone);}
+    public Account findByPhone(String phone) {
+        return accountRepository.findByPhone(phone);
+    }
 
 
     @Override
     public Account findByEmail(final String email) {
-        {
-            return accountRepository.findByEmail(email);
-        }
-    }
 
+        return accountRepository.findByEmail(email);
 
-    @Autowired
-    public AccountServiceImplementation(AccountRepository accountRepository, PasswordEncoder passwordEncoder) {
-        this.accountRepository = accountRepository;
-        this.passwordEncoder = passwordEncoder;
     }
 
     public void createOrUpdateAccount(Account account) {

@@ -8,11 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public class ShippingAddressServiceImplementation extends BaseServiceImplementation<ShippingAddress> implements ShippingAddressService{
-    private final ShippingAddressRepository shippingAddressRepo;
-
-    public ShippingAddressServiceImplementation(ShippingAddressRepository shippingAddressRepo) {
-        this.shippingAddressRepo = shippingAddressRepo;
-    }
+    private  ShippingAddressRepository shippingAddressRepo;
 
     @Override
     protected JpaRepository<ShippingAddress, Long> getRepository() {

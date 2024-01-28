@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @RequiredArgsConstructor
 public class OrderItemServiceImplementation extends BaseServiceImplementation<OrderItem> implements OrderItemService {
-    private final OrderItemRepository orderItemRepository;
+    private OrderItemRepository orderItemRepository;
 
     @Override
     protected JpaRepository<OrderItem, Long> getRepository() {

@@ -10,11 +10,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ProductCategoryServiceImplementation extends BaseServiceImplementation<ProductCategory> implements ProductCategoryService {
-    private final ProductCategoryRepository productCategoryRepo;
-
-    public ProductCategoryServiceImplementation(ProductCategoryRepository productCategoryRepo) {
-        this.productCategoryRepo = productCategoryRepo;
-    }
+    private ProductCategoryRepository productCategoryRepo;
 
 
     @Override

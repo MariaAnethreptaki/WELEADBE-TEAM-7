@@ -8,9 +8,13 @@ import gr.athtech.domain.Account;
 import gr.athtech.service.AccountService;
 import gr.athtech.service.BaseService;
 import gr.athtech.service.AccountService;
+import gr.athtech.transfer.ApiResponse;
 import gr.athtech.transfer.resource.AccountResource;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -28,5 +32,11 @@ public class AccountController extends BaseController<Account, AccountResource> 
 	@Override
 	protected BaseMapper<Account, AccountResource> getMapper() {
 		return customerMapper;
+	}
+	@GetMapping(params = {"email"})
+	public ResponseEntity<ApiResponse<AccountResource>> findByEmail(@RequestParam String email) {
+		return ResponseEntity.ok(ApiResponse.<AccountResource>builder()
+				.data(customerMapper.toResource(accountService.findByEmail(email)))
+				.build());
 	}
 }

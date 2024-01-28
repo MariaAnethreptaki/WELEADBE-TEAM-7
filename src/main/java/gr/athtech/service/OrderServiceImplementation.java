@@ -10,7 +10,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -18,11 +17,7 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class OrderServiceImplementation extends BaseServiceImplementation<Order> implements OrderService {
-	private final OrderRepository orderRepository;
-
-	public OrderServiceImplementation(OrderRepository orderRepository) {
-		this.orderRepository = orderRepository;
-	}
+	private  OrderRepository orderRepository;
 
 	@Override
 	protected JpaRepository<Order, Long> getRepository() {

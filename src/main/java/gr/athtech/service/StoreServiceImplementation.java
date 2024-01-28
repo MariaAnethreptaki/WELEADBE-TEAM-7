@@ -8,12 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class StoreServiceImplementation extends BaseServiceImplementation<Store> implements StoreService {
-    private final StoreRepository storeRepository;
-
-
-    public StoreServiceImplementation(StoreRepository storeRepository) {
-        this.storeRepository = storeRepository;
-    }
+    private  StoreRepository storeRepository;
 
     @Override
     protected JpaRepository<Store, Long> getRepository() {

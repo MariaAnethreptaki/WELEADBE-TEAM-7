@@ -11,8 +11,8 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ProductServiceImplementation extends BaseServiceImplementation<Product> implements ProductService {
-    private final ProductRepository productRepository;
-    private final ProductCategoryService categoryService;
+    private  ProductRepository productRepository;
+    private  ProductCategoryService categoryService;
 
     @Override
     protected JpaRepository<Product, Long> getRepository() {
