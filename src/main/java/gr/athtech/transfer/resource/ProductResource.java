@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.util.ArrayList;
+import java.math.BigDecimal;
 
 @Getter
 @Setter
@@ -14,7 +14,7 @@ public class ProductResource extends BaseResource {
 	public String serialNumber;
 	private String productName;
 	private String description;
-	private double price;
+	private BigDecimal price;
 	private boolean available;
 	private ProductCategory category;
 }

@@ -21,10 +21,8 @@ public class AccountServiceImplementation extends BaseServiceImplementation<Acco
     }
 
 
-    @Override
-    public Account findById(long id) {
-        return null;
-    }
+    public Account findByPhone(String phone){return accountRepository.findByPhone(phone);}
+
 
     @Override
     public Account findByEmail(final String email) {

@@ -17,7 +17,7 @@ public class StoreServiceImplementation extends BaseServiceImplementation<Store>
 
     @Override
     protected JpaRepository<Store, Long> getRepository() {
-        return null;
+        return storeRepository;
     }
 
     @Override

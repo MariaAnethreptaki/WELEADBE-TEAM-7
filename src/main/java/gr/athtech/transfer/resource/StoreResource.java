@@ -1,6 +1,5 @@
 package gr.athtech.transfer.resource;
 
-import gr.athtech.domain.BaseModel;
 import gr.athtech.domain.Product;
 import gr.athtech.domain.Store;
 import lombok.Getter;

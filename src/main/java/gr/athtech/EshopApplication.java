@@ -8,8 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class EshopApplication {
     public static void main(String[] args) {
         SpringApplication.run(EshopApplication.class, args);
-        Account account = new Account();
-        System.out.println(account.toString());
+
+        var customer = new Account();
+        customer.setEmail("some@gmailx.com");
+
+        var customerViaBuilder = Account.builder().surname("Someone").name("Me").build();
 
     }
 }

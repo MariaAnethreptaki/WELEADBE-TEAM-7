@@ -16,7 +16,13 @@ import org.springframework.stereotype.Component;
         @Override
         public void run(final String... args) throws Exception {
             logger.debug("{}", productService.get(1L));
-            //logger.debug("{}", orderService.findWithAllAssociations(2L).get());
+            logger.debug("{}", orderService.findWithAllAssociations(2L).get());
+
+            orderService.findAverageOrderCostPerAccount()
+                    .forEach(kv -> logger.debug("{} has an average order cost of {}.", kv.key(), kv.value()));
+            orderService.findTotalNumberAndCostOfPurchasesPerAccountCategory()
+                    .forEach(dto -> logger.debug("{} has a total number of purchases of {} and a total cost of {}.",
+                            dto.getCategory(), dto.getPurchases(), dto.getCost()));
         }
     }
 

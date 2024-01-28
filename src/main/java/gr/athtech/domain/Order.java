@@ -26,15 +26,14 @@ import java.util.Set;
 
 public class Order extends BaseModel{
     /*attributes*/
-    @ToString.Exclude
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    public Account customerId;
+    private Account customerId;
 
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
-    public Set<Product> products= new HashSet<>();
+    public Set<OrderItem> orderItems= new HashSet<>();
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
