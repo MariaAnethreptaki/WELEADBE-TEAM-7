@@ -55,7 +55,7 @@ public class ShippingAddress extends BaseModel{
 
     @ToString.Exclude
     @NotNull
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne( fetch = FetchType.LAZY, optional = false)
     private Account account;
 
 }

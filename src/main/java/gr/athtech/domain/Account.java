@@ -41,14 +41,18 @@ public class Account extends BaseModel {
     @Size(min=8, message = "Password should be more than 8 characters")
     private String password;
 
+    @NotNull(message = "Phone cannot be null")
     @Size(min=9)
     @Column(length = 50, nullable = false,  unique = true)
     private String phoneNumber;
 
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    @Builder.Default
-    private Set<ShippingAddress> shippingAddresses= new HashSet<>();
+    @NotNull(message = "Address cannot be null")
+    @Column(length = 50, nullable = false)
+    private String address;
+//    @ToString.Exclude
+//    @EqualsAndHashCode.Exclude
+//    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+//    @Builder.Default
+//    private Set<ShippingAddress> shippingAddresses= new HashSet<>();
 
 }

@@ -16,6 +16,7 @@ public class AccountResource extends BaseResource {
 	private String email;
 	private String password;
 	private String phoneNumber;
-	private Set<ShippingAddress> shippingAddresses;
+	private String address;
+	//private Set<ShippingAddress> shippingAddresses;
 
 }

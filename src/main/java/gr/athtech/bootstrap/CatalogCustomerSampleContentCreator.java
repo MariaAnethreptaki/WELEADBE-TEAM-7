@@ -1,31 +1,31 @@
-//package gr.athtech.bootstrap;
-//
-//import gr.athtech.domain.enumPackage.TypeAddress;
-//import lombok.RequiredArgsConstructor;
-//import gr.athtech.domain.Account;
-//import gr.athtech.domain.Product;
-//import gr.athtech.domain.ProductCategory;
-//import gr.athtech.domain.ShippingAddress;
-//import gr.athtech.service.AccountService;
-//import gr.athtech.service.ProductCategoryService;
-//import gr.athtech.service.ProductService;
-//import org.springframework.boot.CommandLineRunner;
-//import org.springframework.context.annotation.Profile;
-//import org.springframework.stereotype.Component;
-//import  gr.athtech.base.BaseComponent;
-//import java.math.BigDecimal;
-//import java.util.*;
-//
-//@Component
-//@Profile("generate-catalog-customers")
-//@RequiredArgsConstructor
-//public class CatalogCustomerSampleContentCreator extends BaseComponent implements CommandLineRunner {
-//	private final ProductService productService;
-//	private final ProductCategoryService productCategoryService;
-//	private final AccountService user;
-//
-//	@Override
-//	public void run(String... args) throws Exception {
+package gr.athtech.bootstrap;
+
+import gr.athtech.domain.enumPackage.TypeAddress;
+import lombok.RequiredArgsConstructor;
+import gr.athtech.domain.Account;
+import gr.athtech.domain.Product;
+import gr.athtech.domain.ProductCategory;
+import gr.athtech.domain.ShippingAddress;
+import gr.athtech.service.AccountService;
+import gr.athtech.service.ProductCategoryService;
+import gr.athtech.service.ProductService;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Component;
+import  gr.athtech.base.BaseComponent;
+import java.math.BigDecimal;
+import java.util.*;
+
+@Component
+@Profile("generate-catalog-customers")
+@RequiredArgsConstructor
+public class CatalogCustomerSampleContentCreator extends BaseComponent implements CommandLineRunner {
+	private final ProductService productService;
+	private final ProductCategoryService productCategoryService;
+	private final AccountService user;
+
+	@Override
+	public void run(String... args) throws Exception {
 //		ProductCategory newCategory = productCategoryService.create(ProductCategory.builder().productCategoryName("SOUBLAKIA").build());
 //		logger.info("Created {}.", newCategory);
 //
@@ -57,7 +57,7 @@
 //				.sorted(Comparator.comparing(Product::getId))
 //				.forEach(p -> logger.debug("{}. {}", p.getId(), p));
 //
-//		Set<ShippingAddress> addressesSet = new HashSet<>();
+		Set<ShippingAddress> addressesSet = new HashSet<>();
 //
 //		ShippingAddress address1 = ShippingAddress.builder()
 //				.street("123 Main St")
@@ -85,26 +85,26 @@
 //
 //		addressesSet.add(address1);
 //		addressesSet.add(address2);
-//
-//		List<Account> customersCreated = user.createAll(
-//
-//				Account.builder().email("malcolm.paker@gmailx.com")
-//						.name("Malcolm").surname("Parker").password("jjjjjjjjjjjj")
-//						.build(),
-//				Account.builder().email("terry.jones@gmailx.com")
-//						.name("Terry").surname("Jones").password("fffffffffffffff")
-//						.build()
-//		);
-//
+
+		List<Account> customersCreated = user.createAll(
+
+				Account.builder().email("malcolm.paker@gmailx.com")
+						.name("Malcolm").surname("Parker").password("jjjjjjjjjjjj")
+						.build(),
+				Account.builder().email("terry.jones@gmailx.com")
+						.name("Terry").surname("Jones").password("fffffffffffffff")
+						.build()
+		);
+
 //		int i=0;
 //		for (ShippingAddress element : addressesSet) {
 //			customersCreated.get(i).getShippingAddresses().add(element);
 //			i++;
 //		}
-//
-//		logger.info("Created {} customers.", customersCreated.size());
-//		customersCreated.stream()
-//				.sorted(Comparator.comparing(Account::getId))
-//				.forEach(c -> logger.debug("{}. {}", c.getId(), c));
-//	}
-//}
+
+		logger.info("Created {} customers.", customersCreated.size());
+		customersCreated.stream()
+				.sorted(Comparator.comparing(Account::getId))
+				.forEach(c -> logger.debug("{}. {}", c.getId(), c));
+	}
+}

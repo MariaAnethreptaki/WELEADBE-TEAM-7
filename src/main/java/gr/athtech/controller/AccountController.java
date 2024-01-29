@@ -33,12 +33,12 @@ public class AccountController extends BaseController<Account, AccountResource> 
 	protected BaseMapper<Account, AccountResource> getMapper() {
 		return accountMapper;
 	}
-//	@GetMapping(params = {"email"})
-//	public ResponseEntity<ApiResponse<AccountResource>> findByEmail(@RequestParam String email) {
-//		return ResponseEntity.ok(ApiResponse.<AccountResource>builder()
-//				.data(accountMapper.toResource(accountService.findByEmail(email)))
-//				.build());
-//	}
+	@GetMapping(params = {"email"})
+	public ResponseEntity<ApiResponse<AccountResource>> findByEmail(@RequestParam String email) {
+		return ResponseEntity.ok(ApiResponse.<AccountResource>builder()
+				.data(accountMapper.toResource(accountService.findByEmail(email)))
+				.build());
+	}
 //
 //	@GetMapping(params = {"phoneNumber"})
 //	public ResponseEntity<ApiResponse<AccountResource>> findByPhone(@RequestParam String phoneNumber) {
