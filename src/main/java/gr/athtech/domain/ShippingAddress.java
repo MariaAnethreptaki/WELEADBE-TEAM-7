@@ -53,4 +53,9 @@ public class ShippingAddress extends BaseModel{
     @Column(length = 50, nullable = false)
     private String communicationPhoneNumber;
 
+    @ToString.Exclude
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    private Account account;
+
 }
