@@ -5,6 +5,7 @@ import gr.athtech.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,26 +19,27 @@ public class ProductServiceImplementation extends BaseServiceImplementation<Prod
     protected JpaRepository<Product, Long> getRepository() {
         return productRepository;
     }
-    @Override
-    public List<Product> getProducts() {
-        return productRepository.findAll();
-    }
+//    @Override
+//    public List<Product> getProducts() {
+//        return productRepository.findAll();
+//    }
+//
+//    @Override
+//    public Product getProduct(String serialNumber) {
+//        return productRepository.findBySerial(serialNumber);
+//    }
 
-    @Override
-    public Product getProduct(String serialNumber) {
-        return productRepository.findBySerial(serialNumber);
-    }
-
-    @Override
-    public Product findBySerial(final String serial) {
-        return productRepository.findBySerial(serial);
-    }
-
-    @Override
-    public Product create(final Product product, final Long categoryId) {
-        var category = categoryService.get(categoryId);
-        product.setCategory(category);
-        return productRepository.create(product,categoryId);
-    }
+//    @Override
+//    @Transactional(readOnly = true)
+//    public Product findBySerial(final String serial) {
+//        return productRepository.findBySerial(serial);
+//    }
+//
+//    @Override
+//    public Product create(final Product product, final Long categoryId) {
+//        var category = categoryService.get(categoryId);
+//        product.setCategory(category);
+//        return productRepository.save(product);
+//    }
 }
 

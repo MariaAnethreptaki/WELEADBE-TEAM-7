@@ -17,8 +17,8 @@ public class OrderItemServiceImplementation extends BaseServiceImplementation<Or
         return orderItemRepository;
     }
 
-    @Override
-    @Transactional(readOnly = true)
-    public OrderItem findById(long id) {
-        return orderItemRepository.findById(id);    }
+//    @Override
+//    @Transactional(readOnly = true)
+//    public OrderItem findById(long id) {
+//        return orderItemRepository.findById(id);    }
 }

@@ -6,8 +6,8 @@ import gr.athtech.domain.StoreCategory;
 
 @Repository
 public interface StoreCategoryRepository extends JpaRepository<StoreCategory, Long> {
-	StoreCategory findByDescription(String description);
-	StoreCategory findByName(String name);
-
-	StoreCategory findMostFamousStoresByCategory();
+//	StoreCategory findByDescription(String description);
+//	StoreCategory findByName(String name);
+//
+//	StoreCategory findMostFamousStoresByCategory();
 }

@@ -2,11 +2,13 @@ package gr.athtech.service;
 
 import gr.athtech.domain.ShippingAddress;
 import gr.athtech.repository.ShippingAddressRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
+@RequiredArgsConstructor
 public class ShippingAddressServiceImplementation extends BaseServiceImplementation<ShippingAddress> implements ShippingAddressService{
     private  ShippingAddressRepository shippingAddressRepo;
 
@@ -15,13 +17,13 @@ public class ShippingAddressServiceImplementation extends BaseServiceImplementat
         return shippingAddressRepo;
     }
 
-    @Override
-    public List<ShippingAddress> getShippingAddressList() {
-        return shippingAddressRepo.findAll();
-    }
-
-    @Override
-    public ShippingAddress getShippingAddress(long id) {
-        return shippingAddressRepo.findById(id);
-    }
+//    @Override
+//    public List<ShippingAddress> getShippingAddressList() {
+//        return shippingAddressRepo.findAll();
+//    }
+//
+//    @Override
+//    public ShippingAddress getShippingAddress(long id) {
+//        return shippingAddressRepo.findById(id);
+//    }
 }

@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("accounts")
 public class AccountController extends BaseController<Account, AccountResource> {
 	private final AccountService accountService;
-	private final AccountMapper customerMapper;
+	private final AccountMapper accountMapper;
 
 	@Override
 	protected BaseService<Account, Long> getBaseService() {
@@ -31,12 +31,19 @@ public class AccountController extends BaseController<Account, AccountResource> 
 
 	@Override
 	protected BaseMapper<Account, AccountResource> getMapper() {
-		return customerMapper;
+		return accountMapper;
 	}
-	@GetMapping(params = {"email"})
-	public ResponseEntity<ApiResponse<AccountResource>> findByEmail(@RequestParam String email) {
-		return ResponseEntity.ok(ApiResponse.<AccountResource>builder()
-				.data(customerMapper.toResource(accountService.findByEmail(email)))
-				.build());
-	}
+//	@GetMapping(params = {"email"})
+//	public ResponseEntity<ApiResponse<AccountResource>> findByEmail(@RequestParam String email) {
+//		return ResponseEntity.ok(ApiResponse.<AccountResource>builder()
+//				.data(accountMapper.toResource(accountService.findByEmail(email)))
+//				.build());
+//	}
+//
+//	@GetMapping(params = {"phoneNumber"})
+//	public ResponseEntity<ApiResponse<AccountResource>> findByPhone(@RequestParam String phoneNumber) {
+//		return ResponseEntity.ok(ApiResponse.<AccountResource>builder()
+//				.data(accountMapper.toResource(accountService.findByPhone(phoneNumber)))
+//				.build());
+//	}
 }

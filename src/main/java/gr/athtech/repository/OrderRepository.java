@@ -13,15 +13,15 @@ import java.util.Optional;
 
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Long> {
-    @Query
-    Optional<Order> findWithAccount(Long id);
-
-    @Query
-    Optional<Order> findWithAllAssociations(Long id);
-
-    @Query
-    List<KeyValue<String, BigDecimal>> findAverageOrderCostPerCustomer();
-
-    @Query(value = "${}", nativeQuery = true)
-    List<PurchasesAndCostPerCustomer> findTotalNumberAndCostOfPurchasesPerCustomerCategory();
+//    @Query
+//    Optional<Order> findWithAccount(Long id);
+//
+////    @Query
+////    Optional<Order> findWithAllAssociations(Long id);
+//
+//    @Query
+//    List<KeyValue<String, BigDecimal>> findAverageOrderCostPerCustomer();
+//
+//    @Query(value = "${}", nativeQuery = true)
+//    List<PurchasesAndCostPerCustomer> findTotalNumberAndCostOfPurchasesPerCustomerCategory();
 }

@@ -1,5 +1,6 @@
 package gr.athtech.transfer.resource;
 
+import gr.athtech.domain.Account;
 import gr.athtech.domain.enumPackage.TypeAddress;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,4 +19,5 @@ public class ShippingAddressResource extends BaseResource {
     private String specificInstructions;
     private TypeAddress typeAddress;
     private String communicationPhoneNumber;
+    private Account account;
 }

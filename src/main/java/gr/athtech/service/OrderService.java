@@ -12,17 +12,17 @@ import java.util.List;
 import java.util.Optional;
 
 public interface OrderService extends BaseService<Order, Long> {
-	Order initiateOrder(Account customer);
-
-	void addItem(Order order, Product product, int quantity);
-
-	void updateItem(Order order, Product product, int quantity);
-
-	void removeItem(Order order, Product product);
-
-	Order checkout(Order order, PaymentInfo paymentMethod);
-	Optional<Order> findWithAllAssociations(Long id);
-	List<KeyValue<String, BigDecimal>> findAverageOrderCostPerAccount();
-	List<PurchasesAndCostPerCustomer> findTotalNumberAndCostOfPurchasesPerAccountCategory();
+//	Order initiateOrder(Account customer);
+//
+//	void addItem(Order order, Product product, int quantity);
+//
+//	void updateItem(Order order, Product product, int quantity);
+//
+//	void removeItem(Order order, Product product);
+//
+//	Order checkout(Order order, PaymentInfo paymentMethod);
+//	//Optional<Order> findWithAllAssociations(Long id);
+//	List<KeyValue<String, BigDecimal>> findAverageOrderCostPerAccount();
+//	List<PurchasesAndCostPerCustomer> findTotalNumberAndCostOfPurchasesPerAccountCategory();
 
 }

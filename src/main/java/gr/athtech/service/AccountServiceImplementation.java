@@ -1,7 +1,7 @@
 package gr.athtech.service;
 
 import gr.athtech.repository.AccountRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 //import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -21,18 +21,19 @@ public class AccountServiceImplementation extends BaseServiceImplementation<Acco
         return accountRepository;
     }
 
+//    @Override
+//    public Account findByPhone(String phoneNumber) {
+//        return accountRepository.findByPhone(phoneNumber);
+//    }
+//
+//
+//    @Override
+//    public Account findByEmail(final String email) {
+//
+//        return accountRepository.findByEmail(email);
+//
+//    }
 
-    public Account findByPhone(String phone) {
-        return accountRepository.findByPhone(phone);
-    }
-
-
-    @Override
-    public Account findByEmail(final String email) {
-
-        return accountRepository.findByEmail(email);
-
-    }
 /*
     public void createOrUpdateAccount(Account account) {
         String encodedPassword = passwordEncoder.encode(account.getPassword());
