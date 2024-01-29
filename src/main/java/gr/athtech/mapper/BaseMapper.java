@@ -1,6 +1,5 @@
 package gr.athtech.mapper;
 
-import org.springframework.integration.annotation.Default;
 
 import java.util.List;
 import java.util.Set;

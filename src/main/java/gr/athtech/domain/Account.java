@@ -37,7 +37,7 @@ public class Account extends BaseModel {
     @Column(length = 50, nullable = false, unique = true)
     private String email;
 
-    @ValidPassword
+    //@ValidPassword
     @Size(min=8, message = "Password should be more than 8 characters")
     private String password;
 

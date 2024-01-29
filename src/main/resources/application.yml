@@ -16,14 +16,14 @@ spring:
       minimum-idle: 1
       pool-name: eshopConnectionPooling
       transaction-isolation: TRANSACTION_READ_COMMITTED
-      username: sa
-      password: sa
+      username: al
+      password: al
       data-source-properties:
         cachePrepStmts: true
         prepStmtCacheSize: 250
         prepStmtCacheSqlLimit: 2048
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:~/.h2/welead/eshop;IFEXISTS=FALSE;AUTO_SERVER=TRUE;
+    url: jdbc:h2:file:~/.h2/welead7;IFEXISTS=FALSE;AUTO_SERVER=TRUE;
   h2:
     console:
       enabled: true

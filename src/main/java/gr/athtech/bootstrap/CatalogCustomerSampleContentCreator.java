@@ -89,10 +89,10 @@ public class CatalogCustomerSampleContentCreator extends BaseComponent implement
 		List<Account> customersCreated = user.createAll(
 
 				Account.builder().email("malcolm.paker@gmailx.com")
-						.name("Malcolm").surname("Parker")
+						.name("Malcolm").surname("Parker").password("jjjjjjjjjjjj")
 						.build(),
 				Account.builder().email("terry.jones@gmailx.com")
-						.name("Terry").surname("Jones")
+						.name("Terry").surname("Jones").password("fffffffffffffff")
 						.build()
 		);
 
