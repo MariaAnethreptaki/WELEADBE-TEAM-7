@@ -13,5 +13,5 @@ import java.util.Set;
 public class StoreCategoryResource extends BaseResource {
     private String storeCategoryName;
     private String description;
-    private Set<Store> stores ;
+    //private Set<Store> stores ;
 }

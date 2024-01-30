@@ -42,9 +42,10 @@ public class Store extends BaseModel {
     @ManyToOne(fetch = FetchType.EAGER)
     private StoreCategory storeCategory;
 
+
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "productCategoryName", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "store", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
     private Set<ProductCategory> menu = new HashSet<>();
 

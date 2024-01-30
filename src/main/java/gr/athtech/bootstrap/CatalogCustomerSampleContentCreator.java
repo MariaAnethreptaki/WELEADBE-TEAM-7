@@ -169,7 +169,7 @@ public class CatalogCustomerSampleContentCreator extends BaseComponent implement
 				.sorted(Comparator.comparing(Account::getId))
 				.forEach(c -> logger.debug("{}. {}", c.getId(), c));
 
-		StoreCategory storeCategory = storeCategoryService.create(StoreCategory.builder().storeCategoryName("SOUVLAKIA").description("tylixta me kreas tis epilogis sas").build());
+		StoreCategory storeCategory = storeCategoryService.create(StoreCategory.builder().storeCategoryName("SOUVLAKIA").description("to kalytero souvlaki tis elladas").build());
 		logger.info("Created {}.", storeCategory);
 
 		Store store =storeService.create(Store.builder().storeName("BEST SOUVLAKI").storeLocation("heraklion").rate(5).status(true).storeCategory(storeCategory).build());
@@ -179,7 +179,7 @@ public class CatalogCustomerSampleContentCreator extends BaseComponent implement
 		categories.add(saladsCategory);
 		categories.add(beveragesCategory);
 		store.setMenu(categories);
-		//storeService.update(store);
+		storeService.update(store);
 
 	}
 }

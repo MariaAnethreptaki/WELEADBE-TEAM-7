@@ -27,11 +27,13 @@ public class StoreCategory extends BaseModel{
     @Column(length = 50, nullable = false)
     private String description;
 
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "storeName", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    @Builder.Default
-    private Set<Store> stores = new HashSet<>();
+
+
+//    @ToString.Exclude
+//    @EqualsAndHashCode.Exclude
+//    @OneToMany(mappedBy = "storeName", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+//    @Builder.Default
+//    private Set<Store> stores = new HashSet<>();
 
 
 }

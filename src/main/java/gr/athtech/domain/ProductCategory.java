@@ -21,6 +21,10 @@ public class ProductCategory extends BaseModel{
     @NotNull
     @Column(length = 50, nullable = false)
    private String productCategoryName;
+
+    @ToString.Exclude
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Store store;
 //
 //    @ToString.Exclude
 //    @EqualsAndHashCode.Exclude

@@ -11,21 +11,21 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ProductCategoryServiceImplementation extends BaseServiceImplementation<ProductCategory> implements ProductCategoryService {
-    private final ProductCategoryRepository productCategoryRepo;
+    private final ProductCategoryRepository productCategoryRepository;
 
 
     @Override
     protected JpaRepository<ProductCategory, Long> getRepository() {
-        return productCategoryRepo;
+        return productCategoryRepository;
     }
 
     @Override
     public List<ProductCategory> getProductCategoryList() {
-        return productCategoryRepo.findAll() ;
+        return productCategoryRepository.findAll() ;
     }
 
     @Override
     public ProductCategory findById(long id) {
-        return productCategoryRepo.findById(id);
+        return productCategoryRepository.findById(id);
     }
 }
