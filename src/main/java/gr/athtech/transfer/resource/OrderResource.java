@@ -20,7 +20,7 @@ import java.util.Set;
 @ToString(callSuper = true)
 public class OrderResource extends BaseResource {
 	public Account customerId;
-	public Set<OrderItemResource> orderItems = new HashSet<>();;
+	public Set<OrderItemResource> orderItems = new HashSet<>();
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss.SSS")
 	public Date orderDate;
 	public StatusOfOrder status;

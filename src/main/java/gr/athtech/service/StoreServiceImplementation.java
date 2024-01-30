@@ -16,7 +16,8 @@ public class StoreServiceImplementation extends BaseServiceImplementation<Store>
         return storeRepository;
     }
 
-//    @Override
-//    public Store findById(long Id) {
-//        return storeRepository.findById(Id);    }
+    @Override
+    public Store findById(long Id) {
+        return storeRepository.findById(Id);
+    }
 }

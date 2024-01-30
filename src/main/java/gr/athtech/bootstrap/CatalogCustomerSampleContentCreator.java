@@ -172,14 +172,15 @@ public class CatalogCustomerSampleContentCreator extends BaseComponent implement
 		StoreCategory storeCategory = storeCategoryService.create(StoreCategory.builder().storeCategoryName("SOUVLAKIA").description("to kalytero souvlaki tis elladas").build());
 		logger.info("Created {}.", storeCategory);
 
-		Store store =storeService.create(Store.builder().storeName("BEST SOUVLAKI").storeLocation("heraklion").rate(5).status(true).storeCategory(storeCategory).build());
 		Set<ProductCategory> categories = new HashSet<>();
 		categories.add(wrapsCategory);
 		categories.add(sidesCategory);
 		categories.add(saladsCategory);
 		categories.add(beveragesCategory);
+		Store store =storeService.create(Store.builder().storeName("BEST SOUVLAKI").menu(categories).storeLocation("heraklion").rate(5).status(true).storeCategory(storeCategory).build());
 		store.setMenu(categories);
 		storeService.update(store);
+		System.out.print("δHDSJFNDSNVFSDNFJDS"+store.getMenu());
 
 	}
 }

@@ -9,5 +9,5 @@ public interface StoreCategoryRepository extends JpaRepository<StoreCategory, Lo
 //	StoreCategory findByDescription(String description);
 //	StoreCategory findByName(String name);
 //
-//	StoreCategory findMostFamousStoresByCategory();
+	StoreCategory findById(long Id);
 }

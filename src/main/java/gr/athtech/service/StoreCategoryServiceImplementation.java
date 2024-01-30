@@ -1,5 +1,6 @@
 package gr.athtech.service;
 
+import gr.athtech.domain.Store;
 import gr.athtech.domain.StoreCategory;
 import gr.athtech.repository.StoreCategoryRepository;
 import lombok.RequiredArgsConstructor;
@@ -16,10 +17,16 @@ public class StoreCategoryServiceImplementation extends BaseServiceImplementatio
 		return storeCategoryRepository;
 	}
 
+	@Override
+	public StoreCategory findById(long Id) {
+		return storeCategoryRepository.findById(Id);
+	}
+
+
 //	@Override
-//	public StoreCategory findByDescription(final String description) {
-//		return categoryRepository.findByDescription(description);
-//	}
+//	public StoreCategory findById(long Id) {
+//		return storeCategoryRepository.findById(Id);}
+
 //
 //	@Override
 //	public StoreCategory findByName(final String name) {
