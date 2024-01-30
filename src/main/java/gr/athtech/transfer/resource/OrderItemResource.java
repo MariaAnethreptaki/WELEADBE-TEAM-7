@@ -13,7 +13,6 @@ import java.math.BigDecimal;
 @ToString(callSuper = true)
 public class OrderItemResource extends BaseResource {
 	private Product product;
-	private Order order;
 	private Integer quantity;
 	private BigDecimal price;
 }

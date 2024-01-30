@@ -1,5 +1,6 @@
 package gr.athtech.transfer.resource;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import gr.athtech.domain.Account;
 import gr.athtech.domain.OrderItem;
 import gr.athtech.domain.enumPackage.PaymentInfo;
@@ -10,6 +11,7 @@ import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 
@@ -18,7 +20,8 @@ import java.util.Set;
 @ToString(callSuper = true)
 public class OrderResource extends BaseResource {
 	public Account customerId;
-	public Set<OrderItem> orderItems;
+	public Set<OrderItemResource> orderItems = new HashSet<>();;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss.SSS")
 	public Date orderDate;
 	public StatusOfOrder status;
 	public PaymentInfo paymentInfo;
