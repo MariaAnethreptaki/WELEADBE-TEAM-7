@@ -1,7 +1,8 @@
 package gr.athtech.transfer.resource;
 
-import gr.athtech.domain.Product;
+import gr.athtech.domain.ProductCategory;
 import gr.athtech.domain.Store;
+import gr.athtech.domain.StoreCategory;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -16,8 +17,7 @@ public class StoreResource extends BaseResource {
     private String storeName;
     private String storeLocation;
     private double rate;
-    private Set<Product> menu;
+    private Set<ProductCategory> menu;
     private boolean status;
-    private String storeCategory;
-    private Set<Store> famousStores;
+    private StoreCategory storeCategory;
 }

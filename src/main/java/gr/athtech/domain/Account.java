@@ -46,13 +46,13 @@ public class Account extends BaseModel {
     @Column(length = 50, nullable = false,  unique = true)
     private String phoneNumber;
 
-    @NotNull(message = "Address cannot be null")
-    @Column(length = 50, nullable = false)
-    private String address;
-//    @ToString.Exclude
-//    @EqualsAndHashCode.Exclude
-//    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-//    @Builder.Default
-//    private Set<ShippingAddress> shippingAddresses= new HashSet<>();
+//    @NotNull(message = "Address cannot be null")
+//    @Column(length = 50, nullable = false)
+//    private String address;
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
+    private Set<ShippingAddress> shippingAddresses= new HashSet<>();
 
 }

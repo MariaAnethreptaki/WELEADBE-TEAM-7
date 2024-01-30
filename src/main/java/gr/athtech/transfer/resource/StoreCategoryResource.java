@@ -11,8 +11,7 @@ import java.util.Set;
 @Setter
 @ToString(callSuper = true)
 public class StoreCategoryResource extends BaseResource {
-    private String nameCategory;
+    private String storeCategoryName;
     private String description;
     private Set<Store> stores ;
-    private Set<Store> famousStoresCategory ;
 }

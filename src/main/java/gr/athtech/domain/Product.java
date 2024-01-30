@@ -28,15 +28,14 @@ public class Product extends BaseModel {
     @Column(length = 50, nullable = false)
     private String productName;
 
-    @NotNull
-    @Column(length = 50, nullable = false)
+    @Column(length = 50)
     private String description;
 
     @NotNull
     @Column(precision = 10, scale = 2, nullable = false)
     private BigDecimal price;
 
-    @NotNull(message = "Not available")
+    @NotNull(message = "Cannot be null, customer's should know the availability of the products")
     @Column(length = 11, nullable = false)
     private boolean available;
 

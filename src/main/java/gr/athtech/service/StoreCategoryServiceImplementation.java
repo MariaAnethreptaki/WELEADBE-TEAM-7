@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class StoreCategoryServiceImplementation extends BaseServiceImplementation<StoreCategory> implements StoreCategoryService {
-	private StoreCategoryRepository categoryRepository;
+	private final StoreCategoryRepository storeCategoryRepository;
 
 	@Override
 	protected JpaRepository<StoreCategory, Long> getRepository() {
-		return categoryRepository;
+		return storeCategoryRepository;
 	}
 
 //	@Override

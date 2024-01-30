@@ -20,7 +20,6 @@ import java.util.Set;
 @Entity
 @Table(name = "STORES")
 @SequenceGenerator(name = "idGenerator", sequenceName = "STORES_SEQ", initialValue = 1, allocationSize = 1)
-
 public class Store extends BaseModel {
     @NotNull
     @Column(length = 50, nullable = false)
@@ -35,25 +34,20 @@ public class Store extends BaseModel {
     @Max(5)
     private double rate;
 
-    @NotNull(message = "CLOSED")
+    @NotNull(message = "store status cannot be null, customers need to know if it's open")
     @Column(length = 11, nullable = false)
     private boolean status;
 
     @NotNull
-    @Column(length = 50, nullable = false)
-    private String storeCategory;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private StoreCategory storeCategory;
 
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "productName", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "productCategoryName", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
-    private Set<Product> menu = new HashSet<>();
+    private Set<ProductCategory> menu = new HashSet<>();
 
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "storeName", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    @Builder.Default
-    private Set<Store> famousStores = new HashSet<>();
 
 }
 
