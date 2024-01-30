@@ -9,6 +9,7 @@ import gr.athtech.transfer.PurchasesAndCostPerCustomer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -23,8 +24,13 @@ public class OrderServiceImplementation extends BaseServiceImplementation<Order>
 	@Override
 	protected JpaRepository<Order, Long> getRepository() {
 		return orderRepository;
+
 	}
-//
+	@Override
+	@Transactional(readOnly = true)
+	public Order findById(long id) {
+		return orderRepository.findById(id);    }
+	//
 //	@Override
 //	public Order initiateOrder(final Account account) {
 //		return Order.builder().customerId(account).build();

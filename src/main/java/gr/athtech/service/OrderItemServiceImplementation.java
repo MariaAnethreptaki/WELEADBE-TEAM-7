@@ -10,15 +10,15 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @RequiredArgsConstructor
 public class OrderItemServiceImplementation extends BaseServiceImplementation<OrderItem> implements OrderItemService {
-    private OrderItemRepository orderItemRepository;
+    private final OrderItemRepository orderItemRepository;
 
     @Override
     protected JpaRepository<OrderItem, Long> getRepository() {
         return orderItemRepository;
     }
 
-//    @Override
-//    @Transactional(readOnly = true)
-//    public OrderItem findById(long id) {
-//        return orderItemRepository.findById(id);    }
+    @Override
+    @Transactional(readOnly = true)
+    public OrderItem findById(long id) {
+        return orderItemRepository.findById(id);    }
 }

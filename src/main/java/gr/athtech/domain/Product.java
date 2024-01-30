@@ -43,4 +43,8 @@ public class Product extends BaseModel {
     @ManyToOne(fetch = FetchType.EAGER)
     private ProductCategory category;
 
+    @ToString.Exclude
+    @OneToOne(fetch = FetchType.EAGER)
+    private OrderItem orderItem;
+
 }
