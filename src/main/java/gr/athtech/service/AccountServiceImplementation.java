@@ -23,11 +23,11 @@ public class AccountServiceImplementation extends BaseServiceImplementation<Acco
         return accountRepository;
     }
 
-//    @Override
-//    public Account findByPhone(String phoneNumber) {
-//        return accountRepository.findByPhone(phoneNumber);
-//    }
-//
+    @Override
+    public Account findByphoneNumber(String phoneNumber) {
+        return accountRepository.findByphoneNumber(phoneNumber);
+    }
+
 
     @Override
     public Account findByEmail(final String email) {

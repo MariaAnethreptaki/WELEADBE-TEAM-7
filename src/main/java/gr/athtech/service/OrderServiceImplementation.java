@@ -24,7 +24,7 @@ public class OrderServiceImplementation extends BaseServiceImplementation<Order>
 	protected JpaRepository<Order, Long> getRepository() {
 		return orderRepository;
 	}
-
+//
 //	@Override
 //	public Order initiateOrder(final Account account) {
 //		return Order.builder().customerId(account).build();
@@ -91,21 +91,21 @@ public class OrderServiceImplementation extends BaseServiceImplementation<Order>
 //
 //	}
 //
-//	public Optional<Order> findWithAccount(Long id) {
-//		return orderRepository.findWithAccount(id);
-//	}
-//
-////	public Optional<Order> findWithAllAssociations(Long id) {
-////		return orderRepository.findWithAllAssociations(id);
+////	public Optional<Order> findWithAccount(Long id) {
+////		return orderRepository.findWithAccount(id);
 ////	}
-//
-//	public List<KeyValue<String, BigDecimal>> findAverageOrderCostPerAccount() {
-//		return orderRepository.findAverageOrderCostPerCustomer();
-//	}
-//
-//	public List<PurchasesAndCostPerCustomer> findTotalNumberAndCostOfPurchasesPerAccountCategory() {
-//		return orderRepository.findTotalNumberAndCostOfPurchasesPerCustomerCategory();
-//	}
+////
+//////	public Optional<Order> findWithAllAssociations(Long id) {
+//////		return orderRepository.findWithAllAssociations(id);
+//////	}
+////
+////	public List<KeyValue<String, BigDecimal>> findAverageOrderCostPerAccount() {
+////		return orderRepository.findAverageOrderCostPerCustomer();
+////	}
+////
+////	public List<PurchasesAndCostPerCustomer> findTotalNumberAndCostOfPurchasesPerAccountCategory() {
+////		return orderRepository.findTotalNumberAndCostOfPurchasesPerCustomerCategory();
+////	}
 //
 //	private boolean checkNullability(Order order, Product product) {
 //		if (order == null) {

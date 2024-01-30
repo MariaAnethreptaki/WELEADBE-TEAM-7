@@ -39,11 +39,11 @@ public class AccountController extends BaseController<Account, AccountResource> 
 				.data(accountMapper.toResource(accountService.findByEmail(email)))
 				.build());
 	}
-//
-//	@GetMapping(params = {"phoneNumber"})
-//	public ResponseEntity<ApiResponse<AccountResource>> findByPhone(@RequestParam String phoneNumber) {
-//		return ResponseEntity.ok(ApiResponse.<AccountResource>builder()
-//				.data(accountMapper.toResource(accountService.findByPhone(phoneNumber)))
-//				.build());
-//	}
+
+	@GetMapping(params = {"phoneNumber"})
+	public ResponseEntity<ApiResponse<AccountResource>> findByPhone(@RequestParam String phoneNumber) {
+		return ResponseEntity.ok(ApiResponse.<AccountResource>builder()
+				.data(accountMapper.toResource(accountService.findByphoneNumber(phoneNumber)))
+				.build());
+	}
 }

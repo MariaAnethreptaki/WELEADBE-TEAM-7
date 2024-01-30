@@ -20,7 +20,7 @@ import java.util.Set;
 @AllArgsConstructor
 @ToString(callSuper = true)
 @Entity
-@Table(name = "ACCOUNTS", indexes = {@Index(columnList = "email")})
+@Table(name = "ACCOUNTS", indexes = {@Index(columnList = "email"), @Index(columnList = "phonenumber")})
 @SequenceGenerator(name = "idGenerator", sequenceName = "ACCOUNTS_SEQ", initialValue = 1, allocationSize = 1)
 public class Account extends BaseModel {
     /*attributes*/

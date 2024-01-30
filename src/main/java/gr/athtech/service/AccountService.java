@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public interface AccountService extends BaseService<Account,Long> {
     Account findByEmail(String email);
-//    Account findByPhone(String phoneNumber);
+   Account findByphoneNumber(String phoneNumber);
 
 
 }
