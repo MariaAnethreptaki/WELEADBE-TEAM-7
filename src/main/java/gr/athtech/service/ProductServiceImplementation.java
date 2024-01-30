@@ -31,8 +31,8 @@ public class ProductServiceImplementation extends BaseServiceImplementation<Prod
 
     @Override
     @Transactional(readOnly = true)
-    public Product findBySerialNumber(final String serial) {
-        return productRepository.findBySerialNumber(serial);
+    public Product findBySerialNumber(final String serialNumber) {
+        return productRepository.findBySerialNumber(serialNumber);
     }
 
     @Override

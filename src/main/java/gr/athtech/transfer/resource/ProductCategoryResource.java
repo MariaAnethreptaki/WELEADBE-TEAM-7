@@ -12,5 +12,5 @@ import java.util.Set;
 @ToString(callSuper = true)
 public class ProductCategoryResource extends BaseResource {
 	private String productCategoryName;
-	private Set<Product> products;
+	//private Set<Product> products;
 }

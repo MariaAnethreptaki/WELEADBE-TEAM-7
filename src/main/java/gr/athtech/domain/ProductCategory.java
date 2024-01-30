@@ -21,11 +21,11 @@ public class ProductCategory extends BaseModel{
     @NotNull
     @Column(length = 50, nullable = false)
    private String productCategoryName;
-
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "serialNumber", fetch = FetchType.EAGER , cascade = CascadeType.ALL, orphanRemoval = true)
-    @Builder.Default
-   private Set<Product> products=new HashSet<>();
+//
+//    @ToString.Exclude
+//    @EqualsAndHashCode.Exclude
+//    @OneToMany(mappedBy = "serialNumber", fetch = FetchType.EAGER , cascade = CascadeType.ALL, orphanRemoval = true)
+//    @Builder.Default
+//   private Set<Product> products=new HashSet<>();
 
 }

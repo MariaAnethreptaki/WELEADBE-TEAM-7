@@ -42,9 +42,9 @@ public class ProductController extends BaseController<Product, ProductResource> 
 		);
 	}
 
-	@GetMapping(params = "serial")
-	public ResponseEntity<ApiResponse<ProductResource>> findBySerial(@RequestParam String serial) {
-		final ProductResource productResource = getMapper().toResource(productService.findBySerialNumber(serial));
+	@GetMapping(params = "serialNumber")
+	public ResponseEntity<ApiResponse<ProductResource>> findBySerialNumber(@RequestParam String serialNumber) {
+		final ProductResource productResource = getMapper().toResource(productService.findBySerialNumber(serialNumber));
 		return ResponseEntity.ok(ApiResponse.<ProductResource>builder().data(productResource).build());
 	}
 }
