@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
-	//Product findBySerial(final String serial);
+	Product findBySerialNumber(final String serial);
 	//Product create(Product product, Long categoryId);
 }

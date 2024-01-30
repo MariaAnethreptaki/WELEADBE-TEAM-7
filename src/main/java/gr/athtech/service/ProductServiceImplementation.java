@@ -12,34 +12,34 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ProductServiceImplementation extends BaseServiceImplementation<Product> implements ProductService {
-    private  ProductRepository productRepository;
-    private  ProductCategoryService categoryService;
+    private final ProductRepository productRepository;
+    private final ProductCategoryService categoryService;
 
     @Override
     protected JpaRepository<Product, Long> getRepository() {
         return productRepository;
     }
-//    @Override
-//    public List<Product> getProducts() {
-//        return productRepository.findAll();
-//    }
-//
-//    @Override
-//    public Product getProduct(String serialNumber) {
-//        return productRepository.findBySerial(serialNumber);
-//    }
+    @Override
+    public List<Product> getProducts() {
+        return productRepository.findAll();
+    }
 
-//    @Override
-//    @Transactional(readOnly = true)
-//    public Product findBySerial(final String serial) {
-//        return productRepository.findBySerial(serial);
-//    }
-//
-//    @Override
-//    public Product create(final Product product, final Long categoryId) {
-//        var category = categoryService.get(categoryId);
-//        product.setCategory(category);
-//        return productRepository.save(product);
-//    }
+    @Override
+    public Product getProduct(String serialNumber) {
+        return productRepository.findBySerialNumber(serialNumber);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Product findBySerialNumber(final String serial) {
+        return productRepository.findBySerialNumber(serial);
+    }
+
+    @Override
+    public Product create(final Product product, final Long categoryId) {
+        var category = categoryService.get(categoryId);
+        product.setCategory(category);
+        return productRepository.save(product);
+    }
 }
 

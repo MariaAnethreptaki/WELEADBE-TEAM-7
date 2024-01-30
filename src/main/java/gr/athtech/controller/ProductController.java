@@ -29,22 +29,22 @@ public class ProductController extends BaseController<Product, ProductResource> 
 		return productMapper;
 	}
 
-//	@PostMapping(params = "categoryId")
-//	public ResponseEntity<ApiResponse<ProductResource>> create(@RequestBody final ProductResource productResource,
-//															   @RequestParam Long categoryId) {
-//		var product = productMapper.toDomain(productResource);
-//		return new ResponseEntity<>(
-//				ApiResponse.<ProductResource>builder()
-//						.data(getMapper().toResource(productService.create(product, categoryId)))
-//						.build(),
-//				getNoCacheHeaders(),
-//				HttpStatus.CREATED
-//		);
-//	}
-//
-//	@GetMapping(params = "serial")
-//	public ResponseEntity<ApiResponse<ProductResource>> findBySerial(@RequestParam String serial) {
-//		final ProductResource productResource = getMapper().toResource(productService.findBySerial(serial));
-//		return ResponseEntity.ok(ApiResponse.<ProductResource>builder().data(productResource).build());
-//	}
+	@PostMapping(params = "categoryId")
+	public ResponseEntity<ApiResponse<ProductResource>> create(@RequestBody final ProductResource productResource,
+															   @RequestParam Long categoryId) {
+		var product = productMapper.toDomain(productResource);
+		return new ResponseEntity<>(
+				ApiResponse.<ProductResource>builder()
+						.data(getMapper().toResource(productService.create(product, categoryId)))
+						.build(),
+				getNoCacheHeaders(),
+				HttpStatus.CREATED
+		);
+	}
+
+	@GetMapping(params = "serial")
+	public ResponseEntity<ApiResponse<ProductResource>> findBySerial(@RequestParam String serial) {
+		final ProductResource productResource = getMapper().toResource(productService.findBySerialNumber(serial));
+		return ResponseEntity.ok(ApiResponse.<ProductResource>builder().data(productResource).build());
+	}
 }
