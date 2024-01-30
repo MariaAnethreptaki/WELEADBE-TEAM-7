@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ProductCategoryServiceImplementation extends BaseServiceImplementation<ProductCategory> implements ProductCategoryService {
-    private ProductCategoryRepository productCategoryRepo;
+    private final ProductCategoryRepository productCategoryRepo;
 
 
     @Override
@@ -19,13 +19,13 @@ public class ProductCategoryServiceImplementation extends BaseServiceImplementat
         return productCategoryRepo;
     }
 
-//    @Override
-//    public List<ProductCategory> getProductCategoryList() {
-//        return productCategoryRepo.findAll() ;
-//    }
-//
-//    @Override
-//    public ProductCategory getProductCategory(long id) {
-//        return productCategoryRepo.findById(id);
-//    }
+    @Override
+    public List<ProductCategory> getProductCategoryList() {
+        return productCategoryRepo.findAll() ;
+    }
+
+    @Override
+    public ProductCategory findById(long id) {
+        return productCategoryRepo.findById(id);
+    }
 }

@@ -12,8 +12,8 @@ import gr.athtech.domain.Account;
 @Service
 @RequiredArgsConstructor
 public class AccountServiceImplementation extends BaseServiceImplementation<Account> implements AccountService {
-    @Autowired
-    private AccountRepository accountRepository;
+
+    private final AccountRepository accountRepository;
 
    // private PasswordEncoder passwordEncoder;
 
