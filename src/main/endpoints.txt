@@ -1,0 +1,507 @@
+  /accounts:
+    get:
+      summary: "GET accounts"
+      operationId: "findByEmail"
+      parameters:
+      - name: "email"
+        in: "query"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/AccountResource"
+
+/accounts:
+     get:
+       summary: "GET accounts"
+       operationId: "findByEmail"
+       parameters:
+       - name: "email"
+         in: "query"
+         required: true
+         schema:
+           type: "string"
+       responses:
+         "200":
+           description: "OK"
+           content:
+             '*/*':
+               schema:
+                 $ref: "#/components/schemas/AccountResource"
+
+  /accounts:
+    get:
+      summary: "GET accounts"
+      operationId: "findAll"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "array"
+
+
+  /accounts:
+    put:
+      summary: "PUT accounts"
+      operationId: "update"
+      responses:
+        "204":
+          description: "No Content"
+
+
+
+   /accounts/register:
+     post:
+       summary: "POST accounts/register"
+       operationId: "create"
+       responses:
+         "200":
+           description: "OK"
+
+
+  /accounts/{id}:
+    get:
+      summary: "GET accounts/{id}"
+      operationId: "get"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "integer"
+          format: "int64"
+      responses:
+        "200":
+          description: "OK"
+
+   /accounts/{id}:
+     delete:
+       summary: "DELETE accounts/{id}"
+       operationId: "delete"
+       parameters:
+       - name: "id"
+         in: "path"
+         required: true
+         schema:
+           type: "integer"
+           format: "int64"
+       responses:
+         "204":
+           description: "No Content"
+
+  /categories:
+    get:
+      summary: "GET categories"
+      operationId: "findAll"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "array"
+
+  /categories:
+    put:
+      summary: "PUT categories"
+      operationId: "update"
+      responses:
+        "204":
+          description: "No Content"
+
+  /categories/register:
+    post:
+      summary: "POST categories/register"
+      operationId: "create"
+      responses:
+        "200":
+          description: "OK"
+
+   /categories/{id}:
+     get:
+       summary: "GET categories/{id}"
+       operationId: "get"
+       parameters:
+       - name: "id"
+         in: "path"
+         required: true
+         schema:
+           type: "integer"
+           format: "int64"
+       responses:
+         "200":
+           description: "OK"
+
+  /categories/{id}:
+    delete:
+      summary: "DELETE categories/{id}"
+      operationId: "delete"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "integer"
+          format: "int64"
+      responses:
+        "204":
+          description: "No Content"
+
+   /orderItems:
+     get:
+       summary: "GET orderItems"
+       operationId: "findAll"
+       responses:
+         "200":
+           description: "OK"
+           content:
+             '*/*':
+               schema:
+                 type: "array"
+
+   /orderItems:
+     put:
+       summary: "PUT orderItems"
+       operationId: "update"
+       responses:
+         "204":
+           description: "No Content"
+
+  /orderItems/register:
+    post:
+      summary: "POST orderItems/register"
+      operationId: "create"
+      responses:
+        "200":
+          description: "OK"
+
+  /orderItems/{id}:
+    get:
+      summary: "GET orderItems/{id}"
+      operationId: "get"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "integer"
+          format: "int64"
+      responses:
+        "200":
+          description: "OK"
+
+  /orderItems/{id}:
+    delete:
+      summary: "DELETE orderItems/{id}"
+      operationId: "delete"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "integer"
+          format: "int64"
+      responses:
+        "204":
+          description: "No Content"
+
+  /orders:
+    get:
+      summary: "GET orders"
+      operationId: "findAll"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "array"
+
+
+  /orders:
+    put:
+      summary: "PUT orders"
+      operationId: "update"
+      responses:
+        "204":
+          description: "No Content"
+
+
+  /orders/register:
+    post:
+      summary: "POST orders/register"
+      operationId: "create"
+      responses:
+        "200":
+          description: "OK"
+
+  /orders/{id}:
+    get:
+      summary: "GET orders/{id}"
+      operationId: "get"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "integer"
+          format: "int64"
+      responses:
+        "200":
+          description: "OK"
+
+  /orders/{id}:
+    delete:
+      summary: "DELETE orders/{id}"
+      operationId: "delete"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "integer"
+          format: "int64"
+      responses:
+        "204":
+          description: "No Content"
+
+  /products:
+    get:
+      summary: "GET products"
+      operationId: "findAll"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "array"
+
+  /products:
+    put:
+      summary: "PUT products"
+      operationId: "update"
+      responses:
+        "204":
+          description: "No Content"
+
+  /products/register:
+    post:
+      summary: "POST products/register"
+      operationId: "create"
+      responses:
+        "200":
+          description: "OK"
+
+  /products/{id}:
+    get:
+      summary: "GET products/{id}"
+      operationId: "get"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "integer"
+          format: "int64"
+      responses:
+        "200":
+          description: "OK"
+
+  /products/{id}:
+    delete:
+      summary: "DELETE products/{id}"
+      operationId: "delete"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "integer"
+          format: "int64"
+      responses:
+        "204":
+          description: "No Content"
+
+  /shippingAddresses:
+    get:
+      summary: "GET shippingAddresses"
+      operationId: "findAll"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "array"
+
+  /shippingAddresses:
+    put:
+      summary: "PUT shippingAddresses"
+      operationId: "update"
+      responses:
+        "204":
+          description: "No Content"
+
+   /shippingAddresses/register:
+     post:
+       summary: "POST shippingAddresses/register"
+       operationId: "create"
+       responses:
+         "200":
+           description: "OK"
+
+  /shippingAddresses/{id}:
+    get:
+      summary: "GET shippingAddresses/{id}"
+      operationId: "get"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "integer"
+          format: "int64"
+      responses:
+        "200":
+          description: "OK"
+
+  /shippingAddresses/{id}:
+    delete:
+      summary: "DELETE shippingAddresses/{id}"
+      operationId: "delete"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "integer"
+          format: "int64"
+      responses:
+        "204":
+          description: "No Content"
+
+   /storeCategories:
+     get:
+       summary: "GET storeCategories"
+       operationId: "findAll"
+       responses:
+         "200":
+           description: "OK"
+           content:
+             '*/*':
+               schema:
+                 type: "array"
+
+  /storeCategories:
+    put:
+      summary: "PUT storeCategories"
+      operationId: "update"
+      responses:
+        "204":
+          description: "No Content"
+
+  /storeCategories/register:
+    post:
+      summary: "POST storeCategories/register"
+      operationId: "create"
+      responses:
+        "200":
+          description: "OK"
+
+  /storeCategories/{id}:
+    get:
+      summary: "GET storeCategories/{id}"
+      operationId: "get"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "integer"
+          format: "int64"
+      responses:
+        "200":
+          description: "OK"
+
+  /storeCategories/{id}:
+    delete:
+      summary: "DELETE storeCategories/{id}"
+      operationId: "delete"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "integer"
+          format: "int64"
+      responses:
+        "204":
+          description: "No Content"
+
+   /stores:
+     get:
+       summary: "GET stores"
+       operationId: "findAll"
+       responses:
+         "200":
+           description: "OK"
+           content:
+             '*/*':
+               schema:
+                 type: "array"
+
+  /stores:
+    put:
+      summary: "PUT stores"
+      operationId: "update"
+      responses:
+        "204":
+          description: "No Content"
+
+  /stores/register:
+    post:
+      summary: "POST stores/register"
+      operationId: "create"
+      responses:
+        "200":
+          description: "OK"
+
+   /stores/{id}:
+     get:
+       summary: "GET stores/{id}"
+       operationId: "get"
+       parameters:
+       - name: "id"
+         in: "path"
+         required: true
+         schema:
+           type: "integer"
+           format: "int64"
+       responses:
+         "200":
+           description: "OK"
+
+  /stores/{id}:
+    delete:
+      summary: "DELETE stores/{id}"
+      operationId: "delete"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "integer"
+          format: "int64"
+      responses:
+        "204":
+          description: "No Content"
+
+
