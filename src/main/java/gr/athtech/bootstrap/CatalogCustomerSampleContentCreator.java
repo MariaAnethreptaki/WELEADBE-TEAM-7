@@ -132,22 +132,22 @@ public class CatalogCustomerSampleContentCreator extends BaseComponent implement
 		List<Account> accountsCreated = user.createAll(
 
 				Account.builder().email("malcolm.paker@gmailx.com")
-						.name("Malcolm").surname("Parker").password("jjjjjjjjjjjj").phoneNumber("6946464646")
+						.name("Malcolm").surname("Parker").password("Ans2024@%$%").phoneNumber("6946464646")
 						.build(),
 				Account.builder().email("terry.jones@gmailx.com")
-						.name("Terry").surname("Jones").password("jjjjjjjjjjjj").phoneNumber("69898989898")
+						.name("Terry").surname("Jones").password("Ans2024@%$%").phoneNumber("69898989898")
 						.build(),
 				Account.builder().email("maria.aneth@gmailx.com")
-						.name("Maria").surname("Anethreptaki").password("jjjjjjjjjjjj").phoneNumber("69797979797")
+						.name("Maria").surname("Anethreptaki").password("Ans2024@%$%").phoneNumber("69797979797")
 						.build(),
 				Account.builder().email("poulaki@gmail.com")
-						.name("Anna").surname("Poulaki").password("lololololo").phoneNumber("6949191491")
+						.name("Anna").surname("Poulaki").password("Ans2024@%$%").phoneNumber("6949191491")
 						.build(),
 				Account.builder().email("pateraki@gmail.com")
-						.name("Alex").surname("Pateraki").password("lululululu").phoneNumber("6941291491")
+						.name("Alex").surname("Pateraki").password("Ans2024@%$%").phoneNumber("6941291491")
 						.build(),
 				Account.builder().email("maria.21@gmil.com")
-						.name("Maria").surname("aberaki").password("lelelelele").phoneNumber("6949194561")
+						.name("Maria").surname("aberaki").password("Ans2024@%$%").phoneNumber("6949194561")
 						.build()
 		);
 

@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ShippingAddressServiceImplementation extends BaseServiceImplementation<ShippingAddress> implements ShippingAddressService{
-    private  ShippingAddressRepository shippingAddressRepo;
+    private  final ShippingAddressRepository shippingAddressRepo;
 
     @Override
     protected JpaRepository<ShippingAddress, Long> getRepository() {
