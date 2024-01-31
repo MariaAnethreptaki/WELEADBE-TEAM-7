@@ -20,4 +20,15 @@ public class StoreServiceImplementation extends BaseServiceImplementation<Store>
     public Store findById(long Id) {
         return storeRepository.findById(Id);
     }
+
+    @Override
+    public Store findByStoreName(String storeName) {
+        return storeRepository.findByStoreName(storeName);
+    }
+
+//    @Override
+//    public Store findByStoreCategoryStoreCategoryName(String storeCategoryName) {
+//        System.out.println("----------------------------------------------------------------\n"+storeRepository.findByStoreName(storeCategoryName));
+//        return storeRepository.findByStoreName(storeCategoryName);
+//    }
 }

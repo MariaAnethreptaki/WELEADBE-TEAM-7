@@ -37,7 +37,7 @@ public abstract class BaseController<T extends BaseModel, R extends BaseResource
 						.build());
 	}
 
-	@PostMapping
+	@PostMapping("register")
 	public ResponseEntity<ApiResponse<R>> create(@Valid @RequestBody final R resource) {
 		var domain = getBaseService().create(getMapper().toDomain(resource));
 		return new ResponseEntity<>(

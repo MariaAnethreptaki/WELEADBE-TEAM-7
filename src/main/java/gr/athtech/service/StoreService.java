@@ -5,5 +5,7 @@ import gr.athtech.domain.Store;
 
 public interface StoreService extends BaseService<Store,Long> {
     Store findById(long Id);
+    Store findByStoreName(String storeName);
+   // Store findByStoreCategoryStoreCategoryName(String storeCategoryName);
 }
 

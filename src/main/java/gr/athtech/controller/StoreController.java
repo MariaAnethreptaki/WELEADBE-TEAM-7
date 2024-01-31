@@ -33,10 +33,24 @@ public class StoreController extends BaseController<Store, StoreResource>{
     protected BaseMapper<Store, StoreResource> getMapper() {
         return storeMapper;
     }
-    @GetMapping(params = {"Id"})
-    public ResponseEntity<ApiResponse<StoreResource>> findById(@RequestParam long Id) {
+//    @GetMapping(params = {"Id"})
+//    public ResponseEntity<ApiResponse<StoreResource>> findById(@RequestParam long Id) {
+//        return ResponseEntity.ok(ApiResponse.<StoreResource>builder()
+//                .data(storeMapper.toResource(storeService.findById(Id)))
+//                .build());
+//    }
+
+    @GetMapping(params = {"storeName"})
+    public ResponseEntity<ApiResponse<StoreResource>> findByStoreName(@RequestParam String storeName) {
         return ResponseEntity.ok(ApiResponse.<StoreResource>builder()
-                .data(storeMapper.toResource(storeService.findById(Id)))
+                .data(storeMapper.toResource(storeService.findByStoreName(storeName)))
                 .build());
     }
+
+//    @GetMapping(params = {"storeCategoryStoreCategoryName"})
+//    public ResponseEntity<ApiResponse<StoreResource>> findByStoreCategoryStoreCategoryName(@RequestParam String storeCategoryName) {
+//        return ResponseEntity.ok(ApiResponse.<StoreResource>builder()
+//                .data(storeMapper.toResource(storeService.findByStoreCategoryStoreCategoryName(storeCategoryName)))
+//                .build());
+//    }
 }

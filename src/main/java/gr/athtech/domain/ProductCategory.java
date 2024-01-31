@@ -25,11 +25,11 @@ public class ProductCategory extends BaseModel{
     @ToString.Exclude
     @ManyToOne(fetch = FetchType.LAZY)
     private Store store;
-//
-//    @ToString.Exclude
-//    @EqualsAndHashCode.Exclude
-//    @OneToMany(mappedBy = "serialNumber", fetch = FetchType.EAGER , cascade = CascadeType.ALL, orphanRemoval = true)
-//    @Builder.Default
-//   private Set<Product> products=new HashSet<>();
+
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @OneToMany(mappedBy = "serialNumber", fetch = FetchType.LAZY , cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
+    private Set<Product> products=new HashSet<>();
 
 }
