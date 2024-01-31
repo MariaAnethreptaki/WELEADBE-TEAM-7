@@ -2,9 +2,8 @@ package gr.athtech.service;
 
 import gr.athtech.repository.AccountRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
-//import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import gr.athtech.domain.Account;
 
@@ -15,7 +14,7 @@ public class AccountServiceImplementation extends BaseServiceImplementation<Acco
 
     private final AccountRepository accountRepository;
 
-   // private PasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder;
 
 
     @Override
@@ -36,11 +35,11 @@ public class AccountServiceImplementation extends BaseServiceImplementation<Acco
 
     }
 
-/*
+
     public void createOrUpdateAccount(Account account) {
         String encodedPassword = passwordEncoder.encode(account.getPassword());
         account.setPassword(encodedPassword);
     }
-*/
+
 }
 

@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -14,5 +15,5 @@ import java.util.Set;
 public class ProductCategoryResource extends BaseResource {
 	private String productCategoryName;
 	private Store store;
-	private Set<Product> products;
+	private Set<Product> products=new HashSet<>();
 }

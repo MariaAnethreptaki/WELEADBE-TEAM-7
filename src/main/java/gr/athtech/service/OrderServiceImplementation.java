@@ -19,7 +19,7 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class OrderServiceImplementation extends BaseServiceImplementation<Order> implements OrderService {
-	private  OrderRepository orderRepository;
+	private final OrderRepository orderRepository;
 
 	@Override
 	protected JpaRepository<Order, Long> getRepository() {
